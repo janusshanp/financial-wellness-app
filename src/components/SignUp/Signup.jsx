@@ -83,7 +83,7 @@ export default function SignUpForm(props){
                     type="submit"
                 >Submit
                 </button>
-                <p>Already a Member? &nbsp;<Link to="/account/login">Login here</Link></p>
+                <p>Already a Member? &nbsp;<Link to="/login">Login here</Link></p>
             </form>
         </div>
     )

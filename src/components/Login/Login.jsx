@@ -1,11 +1,5 @@
 import {useState} from 'react';
-import {
-    BrowserRouter,
-    Routes,
-    Route,
-    Link,
-    useNavigate
-  } from "react-router-dom";
+import {useNavigate, Link} from "react-router-dom";
 import "./Login.css"
 
 export default function Login(props) {
@@ -61,7 +55,7 @@ export default function Login(props) {
                     onChange={handleChange}   
                 />
                 <button type='submit'>Submit</button>
-                <p>Not a Member? &nbsp;<Link to="/account/login">Login here</Link></p>
+                <p>Not a Member? &nbsp;<Link to="/signup">Signup here</Link></p>
             </form>
         </div>
     )
