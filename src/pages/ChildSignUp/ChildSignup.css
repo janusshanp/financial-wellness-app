@@ -1,0 +1,22 @@
+.signup-name-input{
+    position: absolute;
+    width: 484px;
+    height: 52px;
+    left: 175px;
+    top: 192px;
+    font-size: 50px;
+}
+
+
+.age-circle-container{
+    display: flex;
+
+}
+
+.age-circle {
+    width: 96px;
+    height: 90px;
+    border-radius: 50%;
+    border: 3px solid white;
+
+}
