@@ -26,7 +26,6 @@ function App() {
           <Route path="/" element={<HomePage user={loggedInUser}/>}/>
           <Route path="/login" element={<Login setUserInState={setUserInState}/>}/>
           <Route path="/signup" element={<SignUpForm setUserInState={setUserInState}/>}/>
-          <Route path="/camera" element={<CameraPage/>}/>
           <Route path="*" element={<Navigate to="/" />}/>
         </Routes>
       </BrowserRouter>

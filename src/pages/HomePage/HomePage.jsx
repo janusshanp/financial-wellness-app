@@ -6,10 +6,10 @@ export default function HomePage(props){
 
     return(
         <div className="home">
-            <p>Homepage</p>
-            <Link to="/camera">Take Photo</Link>
-            <Link to="/login">Login here</Link>
-            <Link to="/signup">Signup here</Link>
+            <h1 className="landing-title">APP TITLE</h1>
+            <button>Get Started</button>
+            {/* <Link to="/login">Login here</Link>
+            <Link to="/signup">Signup here</Link> */}
         </div>
     )
 }
