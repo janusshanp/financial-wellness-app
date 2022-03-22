@@ -29,9 +29,18 @@ const childSchema = new Schema(
     streak: {
       type: Number,
     },
+    highestStreak: {
+      type: Number,
+    },
     lastLoggedIn: {
-        type: Date,
-      },
+      type: Date,
+    },
+    avatarUrl: {
+      type: String,
+    },
+    totalBalance: {
+      type: Number,
+    },
   },
   {
     timestamps: true,
