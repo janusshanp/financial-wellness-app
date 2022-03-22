@@ -16,13 +16,7 @@ const topicSchema = new Schema({
 
 
 }, {
-  timestamps: true,
-  toJSON: {
-    transform: function(doc, ret){
-      delete ret.password;
-      return ret 
-    }
-  }
+  timestamps: true
 });
 
 let Topic = mongoose.model('Topic', topicSchema);
