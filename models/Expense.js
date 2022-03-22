@@ -16,10 +16,6 @@ const expenseSchema = new Schema({
     type: Number,
     required: true,
   },  
-  department: {
-    type: String,
-    required: true,
-  }, 
   Tax: {
     type: Number,
     required: true,
@@ -38,5 +34,5 @@ const expenseSchema = new Schema({
   }
 });
 
-let User = mongoose.model('Expense', expenseSchema);
+let Expense = mongoose.model('Expense', expenseSchema);
 module.exports = Expense;
