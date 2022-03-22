@@ -4,9 +4,11 @@ import {useRef, useState} from 'react'
 
 export default function AuthPage(props){
 
+    const [childLogin, setchildLogin] = useState(false)
+
     return(
         <div className="authorization">
-            
+
         </div>
     )
 }
