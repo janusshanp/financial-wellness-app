@@ -9,6 +9,7 @@ import {useState} from 'react'
 import Login from '../../components/Login/Login.jsx'
 import SignUpForm from '../../components/SignUp/Signup'
 import HomePage from '../HomePage/HomePage';
+import CameraPage from "../Camera/Camera";
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={<HomePage user={loggedInUser}/>}/>
           <Route path="/login" element={<Login setUserInState={setUserInState}/>}/>
           <Route path="/signup" element={<SignUpForm setUserInState={setUserInState}/>}/>
+          <Route path="/camera" element={<CameraPage/>}/>
           <Route path="*" element={<Navigate to="/" />}/>
         </Routes>
       </BrowserRouter>
