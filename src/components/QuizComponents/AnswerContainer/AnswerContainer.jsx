@@ -2,7 +2,9 @@ import './AnswerContainer.css'
 import Popover from 'react-bootstrap/Popover';
 import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
-function AnswerContainer() {
+import { useEffect } from 'react';
+
+function AnswerContainer({questions, currentQuestion, setCurrentQuestion, options, setOptions}) {
   const popover = (
     <Popover id="popover-basic">
       <Popover.Header as="h3">Popover right</Popover.Header>
@@ -18,15 +20,38 @@ function AnswerContainer() {
       <Button variant="success">Click me to see</Button>
     </OverlayTrigger>
   );
-  
+  const MyButton = () =>(
+    <button></button>
+  )
+  useEffect(()=>{
+    if(options){
+      console.log('options 123', options)
+      console.log('rightanswer', questions[currentQuestion].correctAnswer)
+    }
+  },[options, questions]);
+
+  const myList = [1,2,3,4]
   return (
     
 
-    <div className="answer-container"><Example /> AnswerContainer
+    <div className="answer-container">
+    { options ? 
+    <div>
+      {options.map((element)=>(
+      element === questions[currentQuestion].correctAnswer ? <button className="home-button">
+        {element} answer
+      </button>:
+    <Button>{element}</Button>)) }
     
-    <button className="home-button">
-      HI sdsdsdsdsdssssssssssssssssssssssssssssssssssssssss
-</button>
+    </div>
+    : "Loading"
+  }
+
+  { options ?
+  <button>hi</button> : <button>THS WORKED</button>
+}
+    
+    
   </div>
     
   )
