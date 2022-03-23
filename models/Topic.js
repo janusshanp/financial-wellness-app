@@ -10,7 +10,7 @@ const questionSchema = new Schema({
 
 const topicSchema = new Schema({
   quiz: [questionSchema],
-  category:{type: String, required: true},
+  imgUrl:{type: String, required: true},
   title: {type: String, required: true},
   lesson:{type:String, required: true},
 
