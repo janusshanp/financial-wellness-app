@@ -22,3 +22,5 @@ const topicSchema = new Schema({
 let Topic = mongoose.model('Topic', topicSchema);
 
 module.exports = Topic;
+
+

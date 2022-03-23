@@ -1,22 +1,69 @@
 .signup-name-input{
-    position: absolute;
     width: 484px;
     height: 52px;
     left: 175px;
     top: 192px;
     font-size: 50px;
+    background-color: white;
+    color: #2B3856;
+    border-radius: 20px;
+    text-align: center;
 }
-
 
 .age-circle-container{
     display: flex;
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .age-circle {
-    width: 96px;
-    height: 90px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     border: 3px solid white;
+    font-size: 60px;
+    color: #2B3856;
+}
 
+.avatar-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.avatar-container img {
+    margin: 15px;
+}
+
+.avatar-line {
+    text-align: center;
+}
+
+.signup-header {
+    text-align: center;
+    font-size: 50px;
+}
+
+.signup-steps {
+    text-align: center;
+
+}
+
+.signup-button {
+    position: absolute;
+    width: 367px;
+    height: 72px;
+    left: 233px;
+    top: 1058px;
+    background: #2B3856;
+    border: 1px solid #FFFFFF;
+    box-sizing: border-box;
+    border-radius: 20px;
+    font-size: 30px
+}
+
+.age-circle-row{
+    display: flex;
+    gap: 60px;
+    margin: 20px;
 }
