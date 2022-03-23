@@ -15,6 +15,7 @@ import CameraPage from "../Camera/Camera";
 import TopicList from '../../components/TopicList/TopicList';
 import ChildNav from '../../components/ChildNav/ChildNav';
 import Quiz from '../Quiz/Quiz';
+import ParentSignUp from '../ParentSignUp/ParentSignUp';
 
 function App() {
 
@@ -35,7 +36,7 @@ function App() {
           <Route path="/nav" element = {<ChildNav />} />
           <Route path="/quiz" element = {<Quiz />} />
 
-
+          <Route path="/parent/signup" element={<ParentSignUp/>} />
           <Route path="/child/signup" element={<ChildSignUp/>} />
           <Route path="/child/lesson" element={<TopicList/>} />
           <Route path="/signup" element={<SignUpForm setUserInState={setUserInState}/>}/>

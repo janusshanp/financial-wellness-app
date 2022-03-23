@@ -24,6 +24,7 @@
     border: 3px solid white;
     font-size: 60px;
     color: #2B3856;
+    box-sizing: border-box;
 }
 
 .avatar-container {
@@ -46,7 +47,6 @@
 
 .signup-steps {
     text-align: center;
-
 }
 
 .signup-button {
@@ -66,4 +66,20 @@
     display: flex;
     gap: 60px;
     margin: 20px;
+}
+
+.age-circle.active {
+    border: 10px solid #F9AD51;
+    box-sizing: border-box;
+}
+
+.signup-steps img {
+    width: 366px;
+    height: 364px;
+}
+
+.avatar-image.active {
+    border: 10px solid #F9AD51;
+    box-sizing: border-box;
+    border-radius: 40px;
 }
