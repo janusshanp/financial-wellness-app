@@ -16,6 +16,7 @@ import TopicList from '../../components/TopicList/TopicList';
 import ChildNav from '../../components/ChildNav/ChildNav';
 import Quiz from '../Quiz/Quiz';
 import ParentSignUp from '../ParentSignUp/ParentSignUp';
+import LessonStart from '../../components/LessonStart/LessonStart'
 
 function App() {
   const questions = [
@@ -58,6 +59,7 @@ function App() {
 
           <Route path="/parent/signup" element={<ParentSignUp/>} />
           <Route path="/child/signup" element={<ChildSignUp/>} />
+          <Route path="/lesson/:lessonId" element={<LessonStart/>} />
           <Route path="/child/lesson" element={<TopicList/>} />
           <Route path="/signup" element={<SignUpForm/>}/>
           <Route path="*" element={<Navigate to="/" />}/>
