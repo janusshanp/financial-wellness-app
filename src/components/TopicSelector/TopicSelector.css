@@ -1,0 +1,24 @@
+.topicSelector {
+    background-color: aliceblue;
+    width: 211px;
+    height: 210px;
+    left: 543px;
+    top: 509px;
+    border-radius: 40px;
+    margin: 20px;
+}
+p {
+width: 212px;
+height: 57px;
+left: 131px;
+top: 646px;
+
+font-family: 'Nunito';
+font-style: normal;
+font-weight: 400;
+font-size: 42px;
+line-height: 57px;
+text-align: center;
+
+color: #000000;
+}

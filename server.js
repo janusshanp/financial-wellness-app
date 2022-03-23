@@ -18,6 +18,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'))
+app.use('/api/topics', require('./routes/api/topics'))
 
 
 // The following "catch all" route to return the index.html on all non-AJAX requests
