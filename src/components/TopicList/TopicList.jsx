@@ -18,16 +18,15 @@ function TopicList() {
 
   return (
     <div>
-      <h1>Topics</h1>
-      <ul className="TopicList">
+      <h1>What do you want to learn today?</h1>
+      
         {topics ?
-        <div>
+        <div className="TopicList">
           {topics.map((c) => (
             <TopicSelector title={c.title} imgUrl={c.imgUrl} />
           ))}
           </div>
       : false}
-      </ul>
     </div>
   );
 }
