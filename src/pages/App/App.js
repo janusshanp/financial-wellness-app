@@ -19,19 +19,20 @@ import ParentSignUp from '../ParentSignUp/ParentSignUp';
 
 function App() {
 
-  const [loggedInUser, setLoggedInUser] = useState(null)
+  // const [loggedInUser, setLoggedInUser] = useState(null)
 
-  function setUserInState(incomingUserData){
-    setLoggedInUser(incomingUserData)
-  }
+  // function setUserInState(incomingUserData){
+  //   console.log('hit')
+  //   setLoggedInUser(incomingUserData)
+  // }
 
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage user={loggedInUser}/>}/>
+          <Route path="/" element={<HomePage/>}/>
           <Route path="/selectuser" element={<AuthPage />}/>
-          <Route path="/login" element={<Login setUserInState={setUserInState}/>}/>
+          <Route path="/login" element={<Login/>}/>
 
           <Route path="/nav" element = {<ChildNav />} />
           <Route path="/quiz" element = {<Quiz />} />
@@ -39,7 +40,7 @@ function App() {
           <Route path="/parent/signup" element={<ParentSignUp/>} />
           <Route path="/child/signup" element={<ChildSignUp/>} />
           <Route path="/child/lesson" element={<TopicList/>} />
-          <Route path="/signup" element={<SignUpForm setUserInState={setUserInState}/>}/>
+          <Route path="/signup" element={<SignUpForm/>}/>
           <Route path="*" element={<Navigate to="/" />}/>
         </Routes>
       </BrowserRouter>

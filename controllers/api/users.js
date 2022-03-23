@@ -1,5 +1,5 @@
-const User = require('../../models/User')
 const Child = require('../../models/Child')
+const User = require('../../models/User')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcrypt');
 
@@ -26,10 +26,14 @@ async function childCreate(req,res){
 async function Parentcreate(req,res){
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, parseInt(process.env.SALT_ROUNDS))
-        const user = await User.create({
-            name: req.body.name,
-            email: req.body.email,
-            password: hashedPassword
+        console.log(hashedPassword)
+        let user = User.create({
+            username: req.body.email, 
+            name:req.body.name, 
+            email: req.body.email, 
+            password: req.body.password}, 
+        function(error){
+            console.log(error)
         })
         const token = jwt.sign({user}, process.env.SECRET, { expiresIn: '24h' })
         res.status(200).json(token)

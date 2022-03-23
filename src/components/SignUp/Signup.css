@@ -1,5 +1,17 @@
-.SignUpPage {
+.signup-page {
     text-align: center;
+}
+
+.signup-page input {
+    width: 487px;
+    height: 72px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: none;
+    margin: 17px;
+    font-size: 30px;
+    color: #2B3856;
+    padding: 7px;
 }
 
 .SignUpPage form button {
@@ -8,3 +20,13 @@
 .SignUpPage form button:hover {
     background-color: #245880;
 }
+
+.pass-validation{
+    display: flex;
+    justify-content: center;
+}
+
+/* .signup-title{
+    text-align: center;
+    font-size: 40px;
+} */
