@@ -1,4 +1,3 @@
-import React from "react";
 import "./TopicList.css";
 import { useEffect, useState } from "react";
 import TopicSelector from "../TopicSelector/TopicSelector";
@@ -6,8 +5,6 @@ import ChildNav from "../ChildNav/ChildNav"
 
 function TopicList() {
   const [topics, setTopics] = useState(false)
-
-  let str = 'spending_1.png'
 
   useEffect(() => {
     async function fetchData() {
@@ -26,7 +23,7 @@ function TopicList() {
         {topics ?
         <div className="TopicList">
           {topics.map((c) => (
-            <TopicSelector title={c.title} imgUrl={require('../../images/' + c.imgUrl )} />
+            <TopicSelector title={c.title} imgUrl={require('../../images/' + c.imgUrl )} topicData={c}/>
           ))}
         </div>
       : false}
