@@ -1,12 +1,13 @@
 .home {
     position: absolute;
-    top: 40%;
+    top: 30%;
     left: 50%;
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     align-items: center;
+    width:80%
 }
 
 .landing-title {
@@ -33,5 +34,10 @@
     border-radius: 100px;
     color: #5BC0E5;
     font-size: 30px;
+}
 
+.home-img{
+    position: fixed;
+    right: 0.05%;
+    bottom: -0.01%;
 }

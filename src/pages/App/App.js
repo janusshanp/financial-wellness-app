@@ -12,6 +12,7 @@ import HomePage from '../HomePage/HomePage';
 import AuthPage from '../AuthPage/AuthPage';
 import ChildSignUp from '../ChildSignUp/ChildSignUp';
 import CameraPage from "../Camera/Camera";
+import TopicList from '../../components/TopicList/TopicList';
 import ChildNav from '../../components/ChildNav/ChildNav';
 import Quiz from '../Quiz/Quiz';
 
@@ -36,6 +37,7 @@ function App() {
 
 
           <Route path="/child/signup" element={<ChildSignUp/>} />
+          <Route path="/child/lesson" element={<TopicList/>} />
           <Route path="/signup" element={<SignUpForm setUserInState={setUserInState}/>}/>
           <Route path="*" element={<Navigate to="/" />}/>
         </Routes>
