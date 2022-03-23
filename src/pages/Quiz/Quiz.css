@@ -1,0 +1,23 @@
+.next-question{
+  grid-area:next-question;
+}
+.progress-section{
+  grid-area:progress-section;
+}
+.qna-display{
+  grid-area:qna
+}
+.quiz-page{
+  background:red;
+  height:85vh;
+  display:grid;
+  grid-template-columns: 5vw 9vw 1vw 70vw 1vw 9vw 5vw;
+  grid-template-rows: 1vh 4vh 2vh 78vh; 
+
+  grid-template-areas:
+  ". . . . . . ."
+  ". progress-section progress-section progress-section progress-section  progress-section ."
+  ". . . . . next-question next-question"
+  ". . . qna . next-question next-question";
+
+}
