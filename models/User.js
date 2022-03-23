@@ -20,7 +20,8 @@ const userSchema = new Schema({
     trim: true,
     minlength: 7,
     required: true,
-  },  
+  }, 
+   
 }, {
   timestamps: true,
   toJSON: {
