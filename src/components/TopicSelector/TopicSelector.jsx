@@ -5,9 +5,7 @@ import "./TopicSelector.css";
 function TopicSelector(props) {
   return (
   <div className="topicSelector">
-      <img src={require(props.imgUrl)}></img>
-      
-      {props.imgUrl}
+      <img src={props.imgUrl}></img>
       <p>{props.title}</p>
       
 
