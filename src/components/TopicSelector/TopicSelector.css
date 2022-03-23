@@ -1,14 +1,14 @@
 .topicSelector {
     background-color: aliceblue;
-    width: 211px;
-    height: 210px;
+    width: 300px;
+    height: 350px;
     left: 543px;
     top: 509px;
     border-radius: 40px;
     margin: 20px;
+    line-height: 200px;
 }
 .topicSelector p {
-width: 212px;
 height: 57px;
 left: 131px;
 top: 646px;
@@ -18,8 +18,14 @@ font-family: 'Nunito';
 font-style: normal;
 font-weight: 400;
 font-size: 42px;
-line-height: 57px;
+line-height: 150px;
 text-align: center;
+background: rgba(204, 204, 204, 0);
 
 color: #000000;
+}
+img {
+    justify-content: center;
+    vertical-align: middle;
+    border-radius: 50%;
 }
