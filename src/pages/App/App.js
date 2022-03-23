@@ -14,6 +14,7 @@ import ChildSignUp from '../ChildSignUp/ChildSignUp';
 import CameraPage from "../Camera/Camera";
 import TopicList from '../../components/TopicList/TopicList';
 import ChildNav from '../../components/ChildNav/ChildNav';
+import Quiz from '../Quiz/Quiz';
 
 function App() {
 
@@ -32,6 +33,7 @@ function App() {
           <Route path="/login" element={<Login setUserInState={setUserInState}/>}/>
 
           <Route path="/nav" element = {<ChildNav />} />
+          <Route path="/quiz" element = {<Quiz />} />
 
 
           <Route path="/child/signup" element={<ChildSignUp/>} />
