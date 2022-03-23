@@ -12,6 +12,7 @@ import HomePage from '../HomePage/HomePage';
 import AuthPage from '../AuthPage/AuthPage';
 import ChildSignUp from '../ChildSignUp/ChildSignUp';
 import CameraPage from "../Camera/Camera";
+import ChildNav from '../../components/ChildNav/ChildNav';
 
 function App() {
 
@@ -28,6 +29,8 @@ function App() {
           <Route path="/" element={<HomePage user={loggedInUser}/>}/>
           <Route path="/selectuser" element={<AuthPage />}/>
           <Route path="/login" element={<Login setUserInState={setUserInState}/>}/>
+
+          <Route path="/nav" element = {<ChildNav />} />
 
 
           <Route path="/child/signup" element={<ChildSignUp/>} />

@@ -1,0 +1,36 @@
+.childNav{
+  position: fixed;
+  bottom:0;
+  width:100%;
+  width: 100vw;
+  height:8vh;
+  background-color: #1E2E52;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+img{
+  max-height:6vh;
+  background:none;
+  max-width: 100%;
+}
+#center-nav-img{
+
+  background-color: #1E2E52;;
+  height:7vh;
+  margin-bottom:0;
+  border-radius: 50%;
+  padding: 2%;
+  margin-bottom:4vh;
+  border: 3px solid white;
+}
+.nav-item{
+  background:none;
+}
+
+@media only screen and (orientation: landscape) {
+  body {
+    background-color: white;
+  }
+}
