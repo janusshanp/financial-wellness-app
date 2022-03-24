@@ -10,7 +10,8 @@
   background:white;
 }
 .answer-label{
-  margin-left: 4vw;
+  margin-left: 1vw;
+  font-size: 2.5vmin
 }
 .answer-radio{
   transform:scale(1.8);
@@ -32,4 +33,13 @@
 
 .hide{
   visibility:hidden;
+}
+.popover-body,.popover-header{
+  background: white;
+  color:#2B3856;
+  width:40vw;
+  padding:3px;
+}
+.popover{
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);;
 }

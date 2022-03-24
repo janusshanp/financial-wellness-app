@@ -21,27 +21,10 @@ import LessonDescription from '../../components/LessonDescription/LessonDescript
 import LessonStory from '../../components/LessonStory/LessonStory';
 import ParentDashboard from '../../components/ParentDashboard/ParentDashboard';
 import ParentSwitch from '../../components/ParentSwitch/ParentSwitch';
-
+import ResultsOne from '../../components/ResultsOne/ResultsOne';
+import ResultsTwo from '../../components/ResultsTwo/ResultsTwo';
+import ResultsThree from '../../components/ResultsThree/ResultsThree';
 function App() {
-  const questions = [
-    {
-      question:"What should you do?",
-      answers:['Spend', 'Save', 'Budget', 'Invest'],
-      correctAnswer:'Invest',
-      explanation: "Investing is just the right thing to do"
-    },
-    {
-      question:"Who should you invest in?",
-      answers:['Tesla', 'GME', 'Yourself', 'This hackathon'],
-      correctAnswer:'Tesla',
-      explanation: 'Lowest rated EV, highest rated sigma male'
-    },
-    {
-      question:"What is antiwork?",
-      answers:['Not the move', 'Definitely the move', 'Move to a cheaper location', 'Move your body to the rythm'],
-      correctAnswer:'Move to a cheaper location',
-      explanation: 'just move your body'
-    }]
 
   const [loggedInUser, setLoggedInUser] = useState(null)
   const [childUser, setChildUser] = useState(null)
@@ -64,7 +47,7 @@ function App() {
           <Route path="/login" element={<Login setUserInState={setUserInState}/>}/>
 
           <Route path="/nav" element = {<ChildNav />} />
-          <Route path="/quiz" element = {<Quiz questions = {questions}/>} />
+          <Route path="/quiz" element = {<Quiz />} />
 
           <Route path="/parent/signup" element={<ParentSignUp setUserInState={setUserInState}/>} />
           <Route path="/parent/dashboard" element={<ParentDashboard user={loggedInUser}/>} />
@@ -75,6 +58,9 @@ function App() {
           <Route path="/lesson/:lessonId/story" element={<LessonStory/>} />
           {/* <Route path="/lesson/:lessonId/quiz" element={<LessonStart/>} /> */}
           <Route path="/child/lesson" element={<TopicList/>} />
+          <Route path="/results/one" element={<ResultsOne/>} />
+          <Route path="/results/two" element={<ResultsTwo/>} />
+          <Route path="/results/three" element={<ResultsThree/>} />
           <Route path="/signup" element={<SignUpForm/>}/>
           <Route path="*" element={<Navigate to="/" />}/>
         </Routes>
