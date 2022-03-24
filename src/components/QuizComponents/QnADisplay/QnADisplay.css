@@ -8,10 +8,11 @@
 }
 
 .qna-display{
-  background:green;
+  background:white;
   display:grid;
   grid-template-columns:1vw 5vw 58vw 5vw 1vw;
-  grid-template-rows: 15vh 3vh 60vh; 
+  grid-template-rows: 15vh 3vh 45vh; 
+  overflow-y: scroll;
 
   grid-template-areas:
   ". question-container question-container question-container ."
