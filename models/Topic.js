@@ -10,11 +10,11 @@ const questionSchema = new Schema({
 
 const topicSchema = new Schema({
   quiz: [questionSchema],
-  imgUrl:{type: String, required: true},
+  imgUrl:{type: Schema.Types.Mixed, required: true},
   title: {type: String, required: true},
-  lesson:{type:String, required: true},
-
-
+  description:{type:String, required: true},
+  storyTitle: {type:String, required: true},
+  lessonText:{type:String, required: true},
 }, {
   timestamps: true
 });

@@ -1,13 +1,16 @@
-import React from "react";
 import "./TopicSelector.css";
+import {useNavigate} from 'react-router-dom'
+
 
 function TopicSelector(props) {
-  return (
-  <div className="topicSelector">
-      <img src={require(`/${props.imgUrl}`)} alt="ddd" />
-      <p>{props.title}</p>
-      
 
+  let navigate = useNavigate()
+  let data = props.topicData
+
+  return (
+  <div onClick={()=>navigate(`/lesson/${data._id}`,{state: {data}})} className="topicSelector">
+      <img src={props.imgUrl}></img>
+      <p>{props.title}</p>
   </div>
   )
 }

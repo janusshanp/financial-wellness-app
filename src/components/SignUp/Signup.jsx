@@ -8,7 +8,7 @@ export default function SignUpForm(props){
         email: '',
         password: '',
         confirm: '',
-        signup: true,
+        signup: false,
     })
     const [passwordValidation, setPasswordValidation] = useState({
         length: false,
@@ -28,25 +28,29 @@ export default function SignUpForm(props){
         let regexNum = new RegExp("^(?=.*[0-9])")
         let symbolMatch = userData.password.match(regexSymbol)
         let numMatch = userData.password.match(regexNum)
+        let value = {...passwordValidation}
         if(userData.password.length >= 8){
-            setPasswordValidation({...passwordValidation, length: true})
+            value.length = true
+            setPasswordValidation(value)
         } else {
-            setPasswordValidation({...passwordValidation, length: false})
+            value.length = false
+            setPasswordValidation(value)
         }
         if(symbolMatch && numMatch){
-            setPasswordValidation({...passwordValidation, numSymbol: true})
+            value.numSymbol = true
+            setPasswordValidation(value)
         } else {
-            setPasswordValidation({...passwordValidation, numSymbol: false})
+            value.numSymbol = false
+            setPasswordValidation(value)
         }
-    },[userData.password])
-
-    useEffect(()=>{
-        console.log('u')
         if(userData.password == userData.confirm && userData.password.length >= 8){
-            console.log('hit')
-            setPasswordValidation({...passwordValidation, confirm: true})
+            value.confirm = true
+            setPasswordValidation(value)
+        } else {
+            value.confirm = false
+            setPasswordValidation(value)
         }
-    },[userData.confirm])
+    },[userData.password, userData.confirm])
 
     function handleChange(e){
         setUserData({...userData, [e.target.name]:e.target.value })
@@ -64,54 +68,52 @@ export default function SignUpForm(props){
             })
         })
         if (!fetchResponse.ok) throw new Error('Fetch failed - Bad request')
-        let token = await fetchResponse.json()
-        localStorage.setItem('token', token)
-        const userDoc = await JSON.parse(atob(token.split('.')[1])).user
-        props.setUserInState(userDoc)
-        // navigate("/account/setup")
-        console.log()       
+        // let token = await fetchResponse.json()
+        // localStorage.setItem('token', token)
+        // const userDoc = await JSON.parse(atob(token.split('.')[1])).user
+        // props.setParent(userDoc)
+        navigate("/")     
     }
 
     return (
-        <div>
+        <div className='signup-page'>
             <form autoComplete="off" onSubmit= {handleSubmit}>
-                <h1>Create account</h1>
+                <h1 className='signup-title'>Create account</h1>
                 <img src={require('../../images/parent.jpeg')}></img>
-                <p>Name</p>
-                <input name="name" onChange={handleChange} />
-                <p>Email</p>
-                <input name="email" onChange={handleChange} />
-                <p>password</p>
-                <input name="password" onChange={handleChange} />
-                <p>confirm</p>
-                <input name="confirm" onChange={handleChange} />
-                {/* { errorFlag ?
-                    <p className='error-red'>{errorMessage}</p> :
-                    false
-                } */}
-                <p>Password must:</p>
+                <h1 className='signup-title'>Parent</h1>
                 <div>
-                    {passwordValidation.length ? 
-                    <img src={require('../../images/signup_validation_complete.png')}></img>
-                    : <img src={require('../../images/signup_validation_not_complete.png')}></img>
-                    }
-                    <p>Be at least 8 characters long</p>
+                    <input placeholder="Name" name="name" onChange={handleChange} />
+                    <input placeholder="Email" name="email" onChange={handleChange} />
+                    <input placeholder="Password" name="password" onChange={handleChange} />
+                    <input placeholder="Confirm Password"name="confirm" onChange={handleChange} />
+                    {/* { errorFlag ?
+                        <p className='error-red'>{errorMessage}</p> :
+                        false
+                    } */}
+                    <p>Password must:</p>
+                    <div className='pass-validation'>
+                        {passwordValidation.length ? 
+                        <img src={require('../../images/signup_validation_complete.png')}></img>
+                        : <img src={require('../../images/signup_validation_not_complete.png')}></img>
+                        }
+                        <p>Be at least 8 characters long</p>
+                    </div>
+                    <div className='pass-validation'>
+                        {passwordValidation.confirm ? 
+                        <img src={require('../../images/signup_validation_complete.png')}></img>
+                        : <img src={require('../../images/signup_validation_not_complete.png')}></img>
+                        }
+                    <p>Passwords should match</p>
+                    </div>
+                    <div className='pass-validation'>
+                        {passwordValidation.numSymbol ? 
+                        <img src={require('../../images/signup_validation_complete.png')}></img>
+                        : <img src={require('../../images/signup_validation_not_complete.png')}></img>
+                        }
+                        <p>Include at least one number or symbol</p>
+                    </div>
                 </div>
-                <div>
-                    {passwordValidation.confirm ? 
-                    <img src={require('../../images/signup_validation_complete.png')}></img>
-                    : <img src={require('../../images/signup_validation_not_complete.png')}></img>
-                    }
-                <p>Passwords should match</p>
-                </div>
-                <div>
-                    {passwordValidation.numSymbol ? 
-                    <img src={require('../../images/signup_validation_complete.png')}></img>
-                    : <img src={require('../../images/signup_validation_not_complete.png')}></img>
-                    }
-                    <p>Include at least one number or symbol</p>
-                </div>
-                <button disabled={userData.signup} type="submit"> Continue </button>
+                <button className="signup-button" disabled={userData.signup} type="submit"> Continue </button>
                 <p>Already a Member? &nbsp;<Link to="/login">Login here</Link></p>
             </form>
         </div>

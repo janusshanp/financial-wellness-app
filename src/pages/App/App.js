@@ -16,6 +16,9 @@ import TopicList from '../../components/TopicList/TopicList';
 import ChildNav from '../../components/ChildNav/ChildNav';
 import Quiz from '../Quiz/Quiz';
 import ParentSignUp from '../ParentSignUp/ParentSignUp';
+import LessonStart from '../../components/LessonStart/LessonStart'
+import LessonDescription from '../../components/LessonDescription/LessonDescription';
+import LessonStory from '../../components/LessonStory/LessonStory';
 
 function App() {
   const questions = [
@@ -38,27 +41,32 @@ function App() {
       explanation: 'just move your body'
     }]
 
-  const [loggedInUser, setLoggedInUser] = useState(null)
+  // const [loggedInUser, setLoggedInUser] = useState(null)
 
-  function setUserInState(incomingUserData){
-    setLoggedInUser(incomingUserData)
-  }
+  // function setUserInState(incomingUserData){
+  //   console.log('hit')
+  //   setLoggedInUser(incomingUserData)
+  // }
 
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage user={loggedInUser}/>}/>
+          <Route path="/" element={<HomePage/>}/>
           <Route path="/selectuser" element={<AuthPage />}/>
-          <Route path="/login" element={<Login setUserInState={setUserInState}/>}/>
+          <Route path="/login" element={<Login/>}/>
 
           <Route path="/nav" element = {<ChildNav />} />
           <Route path="/quiz" element = {<Quiz questions = {questions}/>} />
 
           <Route path="/parent/signup" element={<ParentSignUp/>} />
           <Route path="/child/signup" element={<ChildSignUp/>} />
+          <Route path="/lesson/:lessonId" element={<LessonStart/>} />
+          <Route path="/lesson/:lessonId/description" element={<LessonDescription/>} />
+          <Route path="/lesson/:lessonId/story" element={<LessonStory/>} />
+          {/* <Route path="/lesson/:lessonId/quiz" element={<LessonStart/>} /> */}
           <Route path="/child/lesson" element={<TopicList/>} />
-          <Route path="/signup" element={<SignUpForm setUserInState={setUserInState}/>}/>
+          <Route path="/signup" element={<SignUpForm/>}/>
           <Route path="*" element={<Navigate to="/" />}/>
         </Routes>
       </BrowserRouter>
