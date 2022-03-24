@@ -6,7 +6,7 @@ function ChildNav() {
   let navigate = useNavigate()
   function goHome(){
     //MVP
-    navigate(`/parent/dashboard`)
+    navigate(`/child/dashboard`)
 
   }
   function goToLessons(){
@@ -35,7 +35,7 @@ function ChildNav() {
       </div>
 
 
-      </div>
+    </div>
   )
 }
 
