@@ -20,7 +20,7 @@ export default function ResultsThree(props) {
             <br></br>
             <button 
             //MVP navigate update
-                onClick={()=> navigate(`/parent/dashboard`)}
+                onClick={()=> navigate(`/child/dashboard`)}
                 className="lesson-button"
             >Next</button>
             <ChildNav/>
