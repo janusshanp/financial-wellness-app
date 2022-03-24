@@ -1,0 +1,9 @@
+.lesson-button {
+    width: 252px;
+    height: 81px;
+    background: white;
+    border-radius: 20px;
+    color: #5BC0E5;
+    font-size: 48px;
+    border: none;
+}

@@ -24,7 +24,8 @@ background: rgba(204, 204, 204, 0);
 
 color: #000000;
 }
-img {
+
+.topicSelector img {
     justify-content: center;
     vertical-align: middle;
     border-radius: 50%;
