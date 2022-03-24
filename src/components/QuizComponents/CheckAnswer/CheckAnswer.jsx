@@ -1,6 +1,6 @@
 import './CheckAnswer.css'
 
-function CheckAnswer({questions, currentQuestion, setCurrentQuestion, options, setOptions, numberOfQuestions, checkOrNext, setCheckOrNext, nextOrContinue, setNextOrContinue, radioBtnValue, selectedRadioButtonEvent, correctAnswerRef, explanationVisibility, setExplanationVisibility}) {
+function CheckAnswer({questions, currentQuestion, setCurrentQuestion, options, setOptions, numberOfQuestions, checkOrNext, setCheckOrNext, nextOrContinue, setNextOrContinue, radioBtnValue, selectedRadioButtonEvent, correctAnswerRef, explanationVisibility, setExplanationVisibility, setShowConfetti}) {
 
   //next question button functionality
  function check(){
@@ -13,7 +13,7 @@ function CheckAnswer({questions, currentQuestion, setCurrentQuestion, options, s
   //check if radio button value is the correct answer
   if (radioBtnValue === questions[currentQuestion].correctAnswer){
     //Styling applied to components
-    //ICEBOX CONFETTI
+    setShowConfetti(true)
     selectedRadioButtonEvent.parentElement.style.border="2px dashed green";
   }
   else{
