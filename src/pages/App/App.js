@@ -21,7 +21,9 @@ import LessonDescription from '../../components/LessonDescription/LessonDescript
 import LessonStory from '../../components/LessonStory/LessonStory';
 import ParentDashboard from '../../components/ParentDashboard/ParentDashboard';
 import ParentSwitch from '../../components/ParentSwitch/ParentSwitch';
-
+import ResultsOne from '../../components/ResultsOne/ResultsOne';
+import ResultsTwo from '../../components/ResultsTwo/ResultsTwo';
+import ResultsThree from '../../components/ResultsThree/ResultsThree';
 function App() {
   const questions = [
     {
@@ -75,6 +77,9 @@ function App() {
           <Route path="/lesson/:lessonId/story" element={<LessonStory/>} />
           {/* <Route path="/lesson/:lessonId/quiz" element={<LessonStart/>} /> */}
           <Route path="/child/lesson" element={<TopicList/>} />
+          <Route path="/results/one" element={<ResultsOne/>} />
+          <Route path="/results/two" element={<ResultsTwo/>} />
+          <Route path="/results/three" element={<ResultsThree/>} />
           <Route path="/signup" element={<SignUpForm/>}/>
           <Route path="*" element={<Navigate to="/" />}/>
         </Routes>
