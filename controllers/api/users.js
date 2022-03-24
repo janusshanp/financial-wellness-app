@@ -27,7 +27,6 @@ async function childCreate(req,res){
     }
 }
 
-
 async function Parentcreate(req,res){
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, parseInt(process.env.SALT_ROUNDS))

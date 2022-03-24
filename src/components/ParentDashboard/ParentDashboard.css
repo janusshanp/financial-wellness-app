@@ -2,6 +2,12 @@
     text-align: center;
 }
 
+.parent-dashboard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .parent-header p {
     font-size: 34px;
     margin: 55px;
@@ -24,4 +30,12 @@
     background: #FFFFFF;
     border-radius: 20px;
     text-align: center;
+    margin: 20px;
+    padding: 10px;
+}
+
+.child-box p {
+    background-color: white;
+    color: #2B3856;
+    font-size: 34px;
 }

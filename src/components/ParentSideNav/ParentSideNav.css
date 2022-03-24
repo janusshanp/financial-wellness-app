@@ -1,0 +1,44 @@
+.parent-side-nav {
+    background-color: #2B3856;
+    z-index: 2;
+    width: 565px;
+    height: 1194px;
+    position: fixed;
+    left: 0;
+}
+
+.logout{
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+    background-color: #2B3856;
+    font-size: 34px;
+}
+
+.parent-side-nav img {
+    background-color: #2B3856;
+}
+
+.parent-side-nav-top{
+    background-color: #2B3856;
+    padding: 50px;
+    font-size: 34px;
+}
+
+.parent-side-nav-middle{
+    background-color: #2B3856;
+    font-size: 34px;
+}
+
+.parent-side-nav-top img{
+    background-color: #2B3856;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+}
+
+.chevron{
+    position: absolute;
+    right: 0;
+    top: 50%;
+}

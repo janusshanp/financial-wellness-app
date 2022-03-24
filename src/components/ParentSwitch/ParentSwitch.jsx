@@ -12,21 +12,24 @@ export default function ParentSwitch(props){
     })
 
     return(
-        <div>
-            <div>
-                <img src={require('../../images/parent.jpeg')}></img>
-                <p>{props.user.name}</p>
-            </div>
-            {props.user.children.length ? 
-            <div>
-                <img></img>
-            </div>
-            :
-            false
-            }
-            <div>
-                <img onClick={()=>navigate("/child/signup")}src={require('../../images/add_child_button.png')}></img>
-                <p>Add a child</p>
+        <div className="switch-view">
+            Choose Account
+            <div className="switch-icons-container">
+                <div>
+                    <img src={require('../../images/parent.jpeg')}></img>
+                    <p>{props.user.name}</p>
+                </div>
+                {props.user.children.length ?
+                props.user.children.map(child => 
+                    <div >
+                        <img src={child.avatarUrl}></img>
+                        <p>{child.name}</p>
+                    </div>
+                ) : false }
+                <div>
+                    <img onClick={()=>navigate("/child/signup")}src={require('../../images/add_child_button.png')}></img>
+                    <p>Add a child</p>
+                </div>
             </div>
         </div>
     )

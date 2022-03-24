@@ -7,10 +7,6 @@ export default function ParentSignUp(props){
 
     let navigate = useNavigate()
 
-    // function onClick(){
-    //     navigate("/selectuser")  
-    // }
-
     return(
         <div>
             <SignUpForm setUserInState={props.setUserInState}/>
