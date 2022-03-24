@@ -13,6 +13,7 @@ const topicSchema = new Schema({
   imgUrl:{type: Schema.Types.Mixed, required: true},
   title: {type: String, required: true},
   description:{type:String, required: true},
+  storyTitle: {type:String, required: true},
   lessonText:{type:String, required: true},
 }, {
   timestamps: true
