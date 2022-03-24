@@ -10,16 +10,22 @@
 .quiz-button{
   grid-area:quiz-button
 }
+
+.quiz-question-header{
+  grid-area:header
+}
+
 .quiz-page{
   height:85vh;
   display:grid;
   grid-template-columns: 5vw 9vw 1vw 20vw 30vw 20vw 1vw 9vw 5vw;
-  grid-template-rows: 1vh 4vh 5vh 65vh 2vh 6vh 2vh; 
+  grid-template-rows: 1vh 4vh 13vh 5vh 55vh 2vh 6vh 2vh; 
 
   grid-template-areas:
   ". . . . . . . . ."
   ". progress-section progress-section progress-section progress-section progress-section progress-section  progress-section ."
   ". . . . . . . . ."
+  ". . header header header header header . ."
   ". . qna qna qna qna qna . ."
   ". . . . . . . . ."
   ". . . . quiz-button  . . . ."
