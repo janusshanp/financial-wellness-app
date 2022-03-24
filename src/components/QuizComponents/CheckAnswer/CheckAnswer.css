@@ -1,0 +1,18 @@
+
+.check-answer-btn{
+  /* border-radius: 50%; */
+  width: 100%;
+  font-size: 4vw;
+  padding:1vw;
+  background-color: white;
+  color:#5BC0E5;
+  font-weight: 700;
+  border-radius: 20px;
+
+}
+.check-answer{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background:none;
+}
