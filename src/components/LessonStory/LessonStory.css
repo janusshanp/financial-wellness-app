@@ -19,6 +19,9 @@
 .lesson-story p {
     color: black;
     background: rgba(204, 204, 204, 0);
+    font-size: 4vmin;
+    height: 31vh;
+    overflow-y: scroll;
 }
 
 .story-page {
@@ -26,5 +29,5 @@
 }
 
 .lesson-story img {
-    max-width: 85%;
+    max-width: 65%;
 }
