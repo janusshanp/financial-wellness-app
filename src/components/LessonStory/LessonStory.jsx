@@ -7,6 +7,7 @@ export default function LessonStory(props) {
   const location = useLocation();
   const [lessonData, setLessonData] = useState(location.state.lessonData);
 
+
   let navigate = useNavigate();
 
   return (
