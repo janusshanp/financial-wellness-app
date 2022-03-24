@@ -1,8 +1,24 @@
-import './ProgressSection'
+import { useEffect } from 'react'
+import ProgressBar from '../ProgressBar/ProgressBar';
+import './ProgressSection.css'
 
-function ProgressSection() {
+function ProgressSection({numberOfQuestions, currentQuestion}) {
+
+
   return (
-    <div className="progress-section">ProgressSection</div>
+    <div className="progress-section">
+
+      <div className='quiz-progress-text'>
+
+        {`${currentQuestion+1}/${numberOfQuestions} `}
+      </div>
+      <ProgressBar 
+      numberOfQuestions={numberOfQuestions}
+      currentQuestion={currentQuestion} />
+      </div>
+
+      
+
   )
 }
 

@@ -34,7 +34,7 @@ function App() {
     {
       question:"What is antiwork?",
       answers:['Not the move', 'Definitely the move', 'Move to a cheaper location', 'Move your body to the rythm'],
-      correctAnswer:'Invest',
+      correctAnswer:'Move to a cheaper location',
       explanation: 'just move your body'
     }]
 
