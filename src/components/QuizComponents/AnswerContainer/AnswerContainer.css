@@ -1,0 +1,35 @@
+.answer-container{
+  display:flex;
+  height:100%;
+  flex-direction: column;
+  justify-content: space-around;
+  background:white;
+}
+.answer-label, .answer-radio, .answer-option{
+  color:#2B3856;
+  background:white;
+}
+.answer-label{
+  margin-left: 4vw;
+}
+.answer-radio{
+  transform:scale(1.8);
+}
+.answer-button{
+  width: 50vw;
+  height: 8vh;
+  background-color: #FFFFFF;
+  border-radius: 100px;
+  color: #5BC0E5;
+  font-size: 1em;
+  align-self:center
+}
+
+.explain-pop{
+  float:right;
+  visibility:hidden;
+}
+
+.hide{
+  visibility:hidden;
+}
