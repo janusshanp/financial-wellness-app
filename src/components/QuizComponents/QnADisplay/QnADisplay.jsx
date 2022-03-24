@@ -3,12 +3,12 @@ import AnswerContainer from '../AnswerContainer/AnswerContainer'
 import QuestionContainer from '../QuestionContainer/QuestionContainer'
 import './QnADisplay.css'
 
-function QnADisplay({questions, currentQuestion, setCurrentQuestion, options, setOptions}) {
+function QnADisplay({questions, currentQuestion, setCurrentQuestion, options, setOptions, radioBtnValue, setRadioBtnValue, selectedRadioButtonEvent, setSelectedRadioButtonEvent, correctAnswerRef, explanationVisibility, setExplanationVisibility}) {
 
   useEffect(()=>{
     console.log('QUESTIONS 2',questions);
     // setOptions(questions && randomizeAnswerOrder([...questions[currentQuestion]?.answers]))
-  },[options]);
+  },[options, currentQuestion]);
   
   return (
     <div className="qna-display">
@@ -21,7 +21,16 @@ function QnADisplay({questions, currentQuestion, setCurrentQuestion, options, se
       currentQuestion={currentQuestion}
       setCurrentQuestion={setCurrentQuestion}
       options = {options} 
-      setOptions = {setOptions}/>
+      setOptions = {setOptions}
+      radioBtnValue={radioBtnValue}
+      setRadioBtnValue = {setRadioBtnValue}
+      selectedRadioButtonEvent = {selectedRadioButtonEvent}
+      setSelectedRadioButtonEvent = {setSelectedRadioButtonEvent}
+      
+      correctAnswerRef = {correctAnswerRef}
+      
+      explanationVisibility = {explanationVisibility}
+      setExplanationVisibility = {setExplanationVisibility}/>
     </div>
   )
 }
