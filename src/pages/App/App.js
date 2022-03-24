@@ -19,6 +19,8 @@ import ParentSignUp from '../ParentSignUp/ParentSignUp';
 import LessonStart from '../../components/LessonStart/LessonStart'
 import LessonDescription from '../../components/LessonDescription/LessonDescription';
 import LessonStory from '../../components/LessonStory/LessonStory';
+import ParentDashboard from '../../components/ParentDashboard/ParentDashboard';
+import ParentSwitch from '../../components/ParentSwitch/ParentSwitch';
 
 function App() {
   const questions = [
@@ -41,26 +43,33 @@ function App() {
       explanation: 'just move your body'
     }]
 
-  // const [loggedInUser, setLoggedInUser] = useState(null)
+  const [loggedInUser, setLoggedInUser] = useState(null)
+  const [childUser, setChildUser] = useState(null)
 
-  // function setUserInState(incomingUserData){
-  //   console.log('hit')
-  //   setLoggedInUser(incomingUserData)
-  // }
+  function setUserInState(incomingUserData){
+    console.log('hit')
+    setLoggedInUser(incomingUserData)
+  }
+
+  function setChildUserInState(incomingUserData){
+    setChildUser(incomingUserData)
+  }
 
   return (
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage/>}/>
-          <Route path="/selectuser" element={<AuthPage />}/>
-          <Route path="/login" element={<Login/>}/>
+          <Route path="/" element={<HomePage setUserInState={setUserInState}/>}/>
+          {/* <Route path="/selectuser" element={<AuthPage />}/> */}
+          <Route path="/login" element={<Login setUserInState={setUserInState}/>}/>
 
           <Route path="/nav" element = {<ChildNav />} />
           <Route path="/quiz" element = {<Quiz questions = {questions}/>} />
 
-          <Route path="/parent/signup" element={<ParentSignUp/>} />
-          <Route path="/child/signup" element={<ChildSignUp/>} />
+          <Route path="/parent/signup" element={<ParentSignUp setUserInState={setUserInState}/>} />
+          <Route path="/parent/dashboard" element={<ParentDashboard user={loggedInUser}/>} />
+          <Route path="/parent/switch" element={<ParentSwitch user={loggedInUser}/>} />
+          <Route path="/child/signup" element={<ChildSignUp setUserInState={setUserInState}/>} />
           <Route path="/lesson/:lessonId" element={<LessonStart/>} />
           <Route path="/lesson/:lessonId/description" element={<LessonDescription/>} />
           <Route path="/lesson/:lessonId/story" element={<LessonStory/>} />

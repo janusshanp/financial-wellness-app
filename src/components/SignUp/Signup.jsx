@@ -68,11 +68,11 @@ export default function SignUpForm(props){
             })
         })
         if (!fetchResponse.ok) throw new Error('Fetch failed - Bad request')
-        // let token = await fetchResponse.json()
-        // localStorage.setItem('token', token)
-        // const userDoc = await JSON.parse(atob(token.split('.')[1])).user
-        // props.setParent(userDoc)
-        navigate("/")     
+        let token = await fetchResponse.json()
+        localStorage.setItem('token', token)
+        const userDoc = await JSON.parse(atob(token.split('.')[1])).user
+        props.setUserInState(userDoc)
+        navigate("/parent/dashboard")     
     }
 
     return (
@@ -86,10 +86,6 @@ export default function SignUpForm(props){
                     <input placeholder="Email" name="email" onChange={handleChange} />
                     <input placeholder="Password" name="password" onChange={handleChange} />
                     <input placeholder="Confirm Password"name="confirm" onChange={handleChange} />
-                    {/* { errorFlag ?
-                        <p className='error-red'>{errorMessage}</p> :
-                        false
-                    } */}
                     <p>Password must:</p>
                     <div className='pass-validation'>
                         {passwordValidation.length ? 

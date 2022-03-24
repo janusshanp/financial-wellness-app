@@ -4,7 +4,7 @@ import "./Login.css"
 
 export default function Login(props) {
     const [userData, setUserData] = useState({
-        username:'',
+        email:'',
         password: '',
     })
     const [error, setError] = useState(false)
@@ -22,7 +22,7 @@ export default function Login(props) {
             method: 'post',
             headers: {"Content-Type": "application/json"},
             body: JSON.stringify({
-                username: userData.username,
+                email: userData.email,
                 password: userData.password,
             })
         })
@@ -31,10 +31,10 @@ export default function Login(props) {
         }else {
             let token = await fetchResponse.json()
             localStorage.setItem('token', token)
-    
+
             const userDoc = await JSON.parse(atob(token.split('.')[1])).user
             props.setUserInState(userDoc)
-            navigate("/")       
+            navigate("/parent/dashboard")       
         }
     }
 
@@ -44,8 +44,8 @@ export default function Login(props) {
             <form autoComplete='off' onSubmit={handleSubmit}>
                 <p>Username</p>
                 <input
-                    name="username"
-                    value={userData.username} 
+                    name="email"
+                    value={userData.email} 
                     onChange={handleChange}  
                 />
                 <p>password</p>

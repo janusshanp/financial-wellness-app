@@ -16,7 +16,12 @@ async function childCreate(req,res){
             age: req.body.age,
             avatarUrl: req.body.avatarUrl
         })
-        res.status(200).json()
+        let parentUser = await User.findById(req.user._id)
+        parentUser.children.push(newChild._id)
+        parentUser.save()
+        await parentUser.populate('children')
+        console.log(parentUser)
+        res.status(200).json(parentUser)
     } catch(err) {
         res.status(400).json(err)
     }
@@ -26,14 +31,11 @@ async function childCreate(req,res){
 async function Parentcreate(req,res){
     try {
         const hashedPassword = await bcrypt.hash(req.body.password, parseInt(process.env.SALT_ROUNDS))
-        console.log(hashedPassword)
-        let user = User.create({
+        const user = await User.create({
             username: req.body.email, 
             name:req.body.name, 
             email: req.body.email, 
-            password: req.body.password}, 
-        function(error){
-            console.log(error)
+            password: hashedPassword
         })
         const token = jwt.sign({user}, process.env.SECRET, { expiresIn: '24h' })
         res.status(200).json(token)
@@ -44,8 +46,10 @@ async function Parentcreate(req,res){
 
 async function login(req,res){
     try {
-        const user = await User.findOne({username: req.body.username})
+        console.log(req.body)
+        const user = await User.findOne({email: req.body.email})
         if (!(await bcrypt.compare(req.body.password, user.password))) throw new Error();
+        await user.populate('children')
         const token = jwt.sign({user}, process.env.SECRET, {expiresIn: '24h'})
         res.status(200).json(token)
     } catch(err) {

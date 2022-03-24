@@ -6,8 +6,15 @@ export default function HomePage(props){
 
     let navigate = useNavigate()
 
-    function onClick(){
-        navigate("/selectuser")  
+    async function onClick(){
+        let token = localStorage.getItem('token')
+        if (token){
+            const userDoc = await JSON.parse(atob(token.split('.')[1])).user
+            props.setUserInState(userDoc)
+            navigate("/parent/dashboard")
+        }else {
+            navigate("/parent/signup")  
+        }
     }
 
     return(

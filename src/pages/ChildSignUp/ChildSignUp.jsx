@@ -43,9 +43,11 @@ export default function ChildSignUp(props){
     }
 
     async function stepThreeClick(){
+        let jwt = localStorage.getItem('token')
         let fetchResponse = await fetch('/api/users/create/child',{
             method: "POST",
             headers: {
+                'Authorization': 'Bearer ' + jwt,
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
@@ -55,8 +57,11 @@ export default function ChildSignUp(props){
             })
         })
        if (fetchResponse.ok){
-           setStep3(false)
-           setStep4(true)
+            let newUser = await fetchResponse.json()
+            console.log(newUser)
+            setStep3(false)
+            setStep4(true)
+            
        }else{
            console.log('error')
        }

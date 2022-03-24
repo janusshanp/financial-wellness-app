@@ -20,8 +20,8 @@ const userSchema = new Schema({
     trim: true,
     minlength: 7,
     required: true,
-  }, 
-   
+  },
+  children: [{type: Schema.Types.ObjectId, ref: 'Child'}]   
 }, {
   timestamps: true,
   toJSON: {

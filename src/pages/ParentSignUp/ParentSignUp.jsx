@@ -13,7 +13,7 @@ export default function ParentSignUp(props){
 
     return(
         <div>
-            <SignUpForm setParent={props.setParent}/>
+            <SignUpForm setUserInState={props.setUserInState}/>
         </div>
     )
 }

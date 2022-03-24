@@ -16,7 +16,7 @@
     
 }
 
-p {
+.lesson-story p {
     color: black;
     background: rgba(204, 204, 204, 0);
 }
@@ -25,6 +25,6 @@ p {
     text-align: center;
 }
 
-img {
+.lesson-story img {
     max-width: 85%;
 }

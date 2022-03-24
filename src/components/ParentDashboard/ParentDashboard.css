@@ -1,0 +1,7 @@
+.parent-header{
+    display: flex;
+}
+
+.parent-header img{
+    width: 15%
+}

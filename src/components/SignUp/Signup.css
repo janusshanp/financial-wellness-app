@@ -26,6 +26,10 @@
     justify-content: center;
 }
 
+.signup-page img{
+    max-height: 250px;
+}
+
 /* .signup-title{
     text-align: center;
     font-size: 40px;

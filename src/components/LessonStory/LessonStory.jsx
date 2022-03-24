@@ -22,7 +22,7 @@ export default function LessonStory(props) {
       </div>
       <button
         onClick={() =>
-          navigate(`/lesson/${lessonData._id}/description`, {
+          navigate(`/quiz`, {
             state: { lessonData },
           })
         }
