@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './NextQuestion.css'
 import {useNavigate, useLocation} from 'react-router-dom'
 
-function NextQuestion({questions, currentQuestion, setCurrentQuestion, options, setOptions, numberOfQuestions, checkOrNext, setCheckOrNext, nextOrContinue, setNextOrContinue,radioBtnValue, setRadioBtnValue, selectedRadioButtonEvent, setSelectedRadioButtonEvent, correctAnswerRef, explanationVisibility, setExplanationVisibility}) {
+function NextQuestion({questions, currentQuestion, setCurrentQuestion, options, setOptions, numberOfQuestions, checkOrNext, setCheckOrNext, nextOrContinue, setNextOrContinue,radioBtnValue, setRadioBtnValue, selectedRadioButtonEvent, setSelectedRadioButtonEvent, correctAnswerRef, explanationVisibility, setExplanationVisibility, setShowConfetti}) {
   const location = useLocation()
   // const [lessonData, setLessonData] = useState(location.state.lessonData)
   
@@ -17,6 +17,7 @@ function NextQuestion({questions, currentQuestion, setCurrentQuestion, options, 
  function next(){
    //styling removed from components
    setExplanationVisibility('hidden')
+   setShowConfetti(false)
    selectedRadioButtonEvent.checked=false;
    selectedRadioButtonEvent.parentElement.style.border=""
    selectedRadioButtonEvent.parentElement.style.opacity="1";
