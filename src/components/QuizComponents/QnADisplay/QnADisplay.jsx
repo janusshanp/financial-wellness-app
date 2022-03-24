@@ -5,10 +5,6 @@ import './QnADisplay.css'
 
 function QnADisplay({questions, currentQuestion, setCurrentQuestion, options, setOptions, radioBtnValue, setRadioBtnValue, selectedRadioButtonEvent, setSelectedRadioButtonEvent, correctAnswerRef, explanationVisibility, setExplanationVisibility}) {
 
-  useEffect(()=>{
-    console.log('QUESTIONS 2',questions);
-    // setOptions(questions && randomizeAnswerOrder([...questions[currentQuestion]?.answers]))
-  },[options, currentQuestion]);
   
   return (
     <div className="qna-display">
