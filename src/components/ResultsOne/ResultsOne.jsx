@@ -12,7 +12,7 @@ export default function ResultsOne(props) {
 
     return (
     <div>
-        <div className="lesson-start">
+        {/* <div className="lesson-start">
             <h1>OinkOink!</h1>
             <p>I love coins</p>
             <img src={require('../../images/piggy_path_coins.png')} id="piggy-coins"/>
@@ -22,7 +22,7 @@ export default function ResultsOne(props) {
                 className="lesson-button"
             >Collect</button>
             <ChildNav/>
-        </div>
+        </div> */}
         
     </div>
     
