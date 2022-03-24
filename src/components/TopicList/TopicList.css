@@ -17,3 +17,9 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;   
 }
+
+.topic-page {
+    display: flex;
+    flex-direction: column;
+
+}

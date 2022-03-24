@@ -12,7 +12,7 @@ export default function LessonDescription(props) {
 
     return (
     <div>
-        <div>
+        <div className='lesson-description'>
             <h1>{lessonData.title}</h1>
             <img src={require('../../images/' + lessonData.imgUrl )}></img>
             <p>{lessonData.description}</p>

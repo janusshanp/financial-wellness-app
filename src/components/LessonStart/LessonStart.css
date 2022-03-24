@@ -7,3 +7,13 @@
     font-size: 48px;
     border: none;
 }
+
+.lesson-start {
+    text-align: center;
+    
+}
+
+#piggy-coins {
+    max-width: 60%;
+    padding: 15px;
+}
