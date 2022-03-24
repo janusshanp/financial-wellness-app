@@ -21,7 +21,7 @@ async function childCreate(req,res){
         parentUser.save()
         await parentUser.populate('children')
         console.log(parentUser)
-        res.status(200).json(parentUser)
+        res.status(200).json(newChild)
     } catch(err) {
         res.status(400).json(err)
     }

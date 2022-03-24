@@ -8,13 +8,20 @@ export default function ParentDashboard(props){
     const [activeNav, setActiveNav] = useState(false)
     // const dashboardRef= useRef(null)
 
-    console.log(props.user.children)
-    console.log(props.user.name)
+    // console.log(props.user.children)
+    // console.log(props.user.name)
 
-    function closeNav(){
-        if(activeNav){
-            setActiveNav(false)
-        }
+    async function closeNav(){
+        // console.log('clse')
+        // const els = await document.getElementsByClassName('parent-side-nav')
+        // let el = els[0]
+        // el.classList.remove('active')
+    }
+
+    async function openNav(){
+        const els = await document.getElementsByClassName('parent-side-nav')
+        let el = els[0]
+        el.classList.add('active')
     }
 
     let navigate = useNavigate()
@@ -22,10 +29,11 @@ export default function ParentDashboard(props){
 
     return(
         <div className="parent-dashboard" onClick={closeNav}>
-            {activeNav ? <ParentSideNav name={props.user.name}/> : false}
+            <ParentSideNav name={props.user.name}/>
+            {/* {activeNav ? <ParentSideNav name={props.user.name}/> : false} */}
             <div className="parent-header">
                 <img 
-                    onClick={()=>setActiveNav(true)}
+                    onClick={openNav}
                     src={require('../../images/parent.jpeg')}>
                 </img>
                 <p>Dashboard</p>           

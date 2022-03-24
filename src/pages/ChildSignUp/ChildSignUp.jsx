@@ -59,9 +59,9 @@ export default function ChildSignUp(props){
        if (fetchResponse.ok){
             let newUser = await fetchResponse.json()
             console.log(newUser)
+            props.setChildUser(newUser)
             setStep3(false)
             setStep4(true)
-            
        }else{
            console.log('error')
        }
