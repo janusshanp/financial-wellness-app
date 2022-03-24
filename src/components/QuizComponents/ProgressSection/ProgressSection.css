@@ -2,3 +2,70 @@
   font-weight: 400;
   text-align: center;
 }
+.user-img{
+  height:9vmin;
+  width:9vmin;
+}
+.image-score img, .user-img img{
+  height:9vmin;
+  width:9vmin;
+  border-radius: 50%;
+}
+.score
+{
+  position:absolute;
+  right:50%;
+  left:50%;
+  bottom:15%;
+  color:black;
+  font-size:4vmin;
+}
+.image-score{
+  position:relative;
+  grid-area:image-score;
+  text-align: center;
+  color:blue
+}
+.user-img{
+  margin-left: 4vw;
+  grid-area:uimg;
+  text-align: center;
+}
+
+.quiz-progress-text{
+  grid-area:ptext;
+  padding-bottom: 20px;
+}
+.progress-bar{
+  grid-area:pbar;
+}
+
+.progress-message{
+  grid-area:pmessage;
+  text-align: center;
+
+}
+
+
+
+.progress-section{
+  /* background:white; */
+  margin-top:3vh;
+  display:grid;
+  grid-template-columns:4.5vw 20vw 0.5vw 50vw 0.5vw 20vw 4.5vw;
+  grid-template-rows: 0.5vh 1.25vh 0.5vh 1.5vh 0.5vh 1.25vh 0.5vh; 
+  /* overflow-y: scroll; */
+
+  grid-template-areas:
+  ". . . . . . ."
+  ". uimg . ptext . image-score ."
+  ". uimg . . . image-score ."
+  ". uimg . pbar . image-score ."
+  ". uimg . . . image-score ."
+  ". uimg . pmessage . image-score ."
+  ". . . . . . .";
+
+  position: absolute;
+
+  
+}

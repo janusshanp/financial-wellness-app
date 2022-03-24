@@ -36,8 +36,22 @@ function ProgressSection({numberOfQuestions, currentQuestion}) {
 
       <div className='quiz-progress-text'>
 
-        {`${currentQuestion+1}/${numberOfQuestions}  ${message}`}
+        {`${currentQuestion+1}/${numberOfQuestions}`}
 
+      </div>
+      <div className="progress-message">
+      {message}
+      </div>
+      <div className="user-img">
+        <img src={require(`../../../images/avatar_dog.png`)}></img>
+      </div>
+      <div className="image-score">
+        <div className="image">
+        <img src={require(`../../../images/avatar_polar_bear.png`)}></img>
+        </div>
+          <div className="score">
+            1
+          </div>
       </div>
       <ProgressBar 
       numberOfQuestions={numberOfQuestions}
