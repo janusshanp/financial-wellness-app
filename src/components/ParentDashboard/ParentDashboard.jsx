@@ -18,7 +18,7 @@ export default function ParentDashboard(props){
             </div>
             <h1>Hello {props.user.name}!</h1>
             {props.user.children.length ? 
-            <div>
+            <div className="child-box">
                 <img></img>
                 <p>Jack</p>
             </div>

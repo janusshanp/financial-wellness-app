@@ -5,7 +5,6 @@ import CheckAnswer from '../../components/QuizComponents/CheckAnswer/CheckAnswer
 import NextQuestion from '../../components/QuizComponents/NextQuestion/NextQuestion'
 import ProgressSection from '../../components/QuizComponents/ProgressSection/ProgressSection'
 import QnADisplay from '../../components/QuizComponents/QnADisplay/QnADisplay'
-import { useLocation } from 'react-router-dom'
 import './Quiz.css'
 
 function Quiz({questions}) {

@@ -1,0 +1,21 @@
+.login-page {
+    text-align: center;
+    margin: 20px;
+}
+
+.login-page p {
+    font-size: 34px;
+    line-height: 46px;
+}
+
+.login-page input {
+    width: 487px;
+    height: 72px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    border: none;
+    margin: 17px;
+    font-size: 30px;
+    color: #2B3856;
+    padding: 7px;
+}

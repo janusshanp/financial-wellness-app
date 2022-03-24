@@ -1,7 +1,27 @@
 .parent-header{
-    display: flex;
+    text-align: center;
+}
+
+.parent-header p {
+    font-size: 34px;
+    margin: 55px;
 }
 
 .parent-header img{
-    width: 15%
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 80px;
+    top: 40px;
+    border: 10px solid #2B3856;
+    box-sizing: border-box;
+    border-radius: 100px;
+}
+
+.child-box {
+    width: 674px;
+    height: 304px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    text-align: center;
 }

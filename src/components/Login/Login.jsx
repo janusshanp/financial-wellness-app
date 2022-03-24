@@ -39,22 +39,23 @@ export default function Login(props) {
     }
 
     return (
-        <div>
+        <div className='login-page'>
             <p>Login Page</p>
             <form autoComplete='off' onSubmit={handleSubmit}>
-                <p>Username</p>
                 <input
+                    placeholder='Email'
                     name="email"
                     value={userData.email} 
                     onChange={handleChange}  
                 />
-                <p>password</p>
-                <input 
+                <input
+                    placeholder='Password' 
                     name="password"
                     value={userData.password}
                     onChange={handleChange}   
                 />
-                <button type='submit'>Submit</button>
+                <br></br>
+                <button className="signup-button"type='submit'>Submit</button>
                 <p>Not a Member? &nbsp;<Link to="/signup">Signup here</Link></p>
             </form>
         </div>
