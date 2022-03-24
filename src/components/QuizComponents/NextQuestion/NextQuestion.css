@@ -1,0 +1,16 @@
+.next-question-btn{
+  /* border-radius: 50%; */
+  width: 100%;
+  font-size: 4vw;
+  padding:1vw;
+  background-color: #2B3856;
+  font-weight: 700;
+  border-radius: 20px;
+
+}
+.next-question{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background:none;
+}
