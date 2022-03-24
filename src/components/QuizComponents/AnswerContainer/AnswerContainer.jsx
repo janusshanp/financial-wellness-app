@@ -45,10 +45,11 @@ function AnswerContainer({questions, currentQuestion, setCurrentQuestion, option
 { options ? 
     <>
       {options.map((element, i)=>(
+        
       element === questions[currentQuestion].correctAnswer ? 
       <div ref={correctAnswerRef} className="answer-option">
         <input className="answer-radio" onChange={changeRadioButton} name={currentQuestion} value={element} id={element} type="radio"/>
-        <label className="answer-label" htmlFor={element}>{element} Answer</label>
+        <label className="answer-label" htmlFor={element}>{element}</label>
         <Example />
       </div>
       :

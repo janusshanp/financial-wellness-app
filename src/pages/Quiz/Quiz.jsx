@@ -1,4 +1,6 @@
 import { useEffect, useState, useRef } from 'react'
+import { useLocation, useNavigate } from 'react-router-dom'
+import ChildNav from '../../components/ChildNav/ChildNav'
 import CheckAnswer from '../../components/QuizComponents/CheckAnswer/CheckAnswer'
 import NextQuestion from '../../components/QuizComponents/NextQuestion/NextQuestion'
 import ProgressSection from '../../components/QuizComponents/ProgressSection/ProgressSection'
@@ -6,6 +8,9 @@ import QnADisplay from '../../components/QuizComponents/QnADisplay/QnADisplay'
 import './Quiz.css'
 
 function Quiz({questions}) {
+  const location = useLocation();
+  const [lessonData, setLessonData] = useState(location.state.lessonData);
+  const [questionList,setQuestionList] = useState(lessonData.quiz)
   const [options, setOptions] = useState()
   const [currentQuestion, setCurrentQuestion]= useState(0)
   const [checkOrNext, setCheckOrNext] = useState('check')
@@ -19,9 +24,9 @@ function Quiz({questions}) {
   }
 
     useEffect(()=>{
-      console.log('questions 0', questions);
+      questions = location.state.lessonData.quiz
       setOptions(questions && randomizeAnswerOrder([...questions[currentQuestion]?.answers]))
-    },[questions]);
+    },[]);
     // console.log(options)
     
     const randomizeAnswerOrder = (answers) =>{
@@ -35,7 +40,7 @@ function Quiz({questions}) {
       currentQuestion={currentQuestion}
       />
       <QnADisplay 
-      questions = {questions}
+      questions = {questionList}
       currentQuestion={currentQuestion}
       setCurrentQuestion={setCurrentQuestion}
       options = {options}
@@ -51,13 +56,13 @@ function Quiz({questions}) {
       <div className="quiz-button">
         {checkOrNext ==='check' ?
       <CheckAnswer
-      questions = {questions}
+      questions = {questionList}
       currentQuestion={currentQuestion}
       setCurrentQuestion={setCurrentQuestion}
       options = {options}
       setOptions={setOptions}
       
-      numberOfQuestions = {questions.length}
+      numberOfQuestions = {questionList.length}
       checkOrNext={checkOrNext}
       setCheckOrNext={setCheckOrNext}
       nextOrContinue={nextOrContinue}
@@ -70,13 +75,13 @@ function Quiz({questions}) {
       explanationVisibility={explanationVisibility}
       setExplanationVisibility={setExplanationVisibility}/>:
       <NextQuestion 
-      questions = {questions}
+      questions = {questionList}
       currentQuestion={currentQuestion}
       setCurrentQuestion={setCurrentQuestion}
       options = {options}
       setOptions={setOptions}
       
-      numberOfQuestions = {questions.length}
+      numberOfQuestions = {questionList.length}
       checkOrNext={checkOrNext}
       setCheckOrNext={setCheckOrNext}
       nextOrContinue={nextOrContinue}
@@ -93,6 +98,7 @@ function Quiz({questions}) {
       setExplanationVisibility = {setExplanationVisibility}/>
     }
     </div>
+    <ChildNav />
       </div>
 
   )
