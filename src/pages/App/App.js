@@ -50,7 +50,7 @@ function App() {
           <Route path="/login" element={<Login setUserInState={setUserInState}/>}/>
 
           <Route path="/nav" element = {<ChildNav />} />
-          <Route path="/quiz" element = {<Quiz />} />
+          <Route path="/quiz" element = {<Quiz childUser={childUser}/>} />
 
           <Route path="/parent/signup" element={<ParentSignUp setUserInState={setUserInState}/>} />
           <Route path="/parent/dashboard" element={<ParentDashboard user={loggedInUser}/>} />
