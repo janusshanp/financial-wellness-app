@@ -5,3 +5,26 @@
     border-radius: 20px;
     color: #5BC0E5;
 }
+
+.lesson-story {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    width: 80%;
+    margin: 5% auto;
+    border-radius: 5%;
+    
+}
+
+p {
+    color: black;
+    background: rgba(204, 204, 204, 0);
+}
+
+.story-page {
+    text-align: center;
+}
+
+img {
+    max-width: 85%;
+}

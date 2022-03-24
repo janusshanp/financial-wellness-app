@@ -17,7 +17,7 @@ function TopicList() {
   []);
 
   return (
-    <div>
+    <div className="topic-page">
       <h1>What do you want to learn today?</h1>
       {/* <img src={require('../../images/' + topics[1].imgUrl)}></img> */}
         {topics ?

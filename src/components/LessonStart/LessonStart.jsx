@@ -12,11 +12,11 @@ export default function LessonStart(props) {
 
     return (
     <div>
-        <div>
+        <div className="lesson-start">
             <h1>{lessonData.title}</h1>
             <img src={require('../../images/' + lessonData.imgUrl )}></img>
             <p>Help Piggy collect all the coins and Jackpot!</p>
-            <img src={require('../../images/piggy_path_coins.png')}/>
+            <img src={require('../../images/piggy_path_coins.png')} id="piggy-coins"/>
             <br></br>
             <button 
                 onClick={()=> navigate(`/lesson/${lessonData._id}/description`,{state: {lessonData}})}
@@ -24,6 +24,7 @@ export default function LessonStart(props) {
             >OK!</button>
             <ChildNav/>
         </div>
+        
     </div>
     
     )
