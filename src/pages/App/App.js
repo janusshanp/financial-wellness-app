@@ -24,6 +24,9 @@ import ParentSwitch from '../../components/ParentSwitch/ParentSwitch';
 import ResultsOne from '../../components/ResultsOne/ResultsOne';
 import ResultsTwo from '../../components/ResultsTwo/ResultsTwo';
 import ResultsThree from '../../components/ResultsThree/ResultsThree';
+import ChildDashboard from '../../components/ChildDashboard/ChildDashboard';
+
+
 function App() {
 
   const [loggedInUser, setLoggedInUser] = useState(null)
@@ -51,8 +54,9 @@ function App() {
 
           <Route path="/parent/signup" element={<ParentSignUp setUserInState={setUserInState}/>} />
           <Route path="/parent/dashboard" element={<ParentDashboard user={loggedInUser}/>} />
-          <Route path="/parent/switch" element={<ParentSwitch user={loggedInUser}/>} />
+          <Route path="/parent/switch" element={<ParentSwitch setChildUser={setChildUserInState} user={loggedInUser}/>} />
           <Route path="/child/signup" element={<ChildSignUp setUserInState={setUserInState}/>} />
+          <Route path="/child/dashboard" element={<ChildDashboard childUser={childUser}/>} />
           <Route path="/lesson/:lessonId" element={<LessonStart/>} />
           <Route path="/lesson/:lessonId/description" element={<LessonDescription/>} />
           <Route path="/lesson/:lessonId/story" element={<LessonStory/>} />

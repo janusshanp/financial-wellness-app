@@ -11,6 +11,11 @@ export default function ParentSwitch(props){
         console.log(props.user.children)
     })
 
+    function childSwitch(child){
+        props.setChildUser(child)
+        navigate("/child/dashboard")
+    }
+
     return(
         <div className="switch-view">
             Choose Account
@@ -21,13 +26,13 @@ export default function ParentSwitch(props){
                 </div>
                 {props.user.children.length ?
                 props.user.children.map(child => 
-                    <div >
+                    <div onClick={() => childSwitch(child)}className="child-switch-avatar">
                         <img src={child.avatarUrl}></img>
                         <p>{child.name}</p>
                     </div>
                 ) : false }
                 <div>
-                    <img onClick={()=>navigate("/child/signup")}src={require('../../images/add_child_button.png')}></img>
+                    <img onClick={()=> navigate("/child/signup")}src={require('../../images/add_child_button.png')}></img>
                     <p>Add a child</p>
                 </div>
             </div>

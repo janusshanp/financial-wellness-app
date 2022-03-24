@@ -1,7 +1,7 @@
 import "./ChildDashboard.css"
 import {useRef, useState} from 'react'
 import {useNavigate, Link} from "react-router-dom";
-
+import ChildNav from "../ChildNav/ChildNav";
 
 export default function ChildDashboard(props){
 
@@ -14,7 +14,13 @@ export default function ChildDashboard(props){
 
     return(
         <div className="child-dashboard">
-            <h1>Child Dashboard</h1>
+            <h1 className="dash-title">Hello! {props.childUser.name}</h1>
+            <div className="piggy-container">
+                <img src={require('../../images/piggy_child_dashboard.png')}></img>
+                <p>Balance: ${props.childUser.totalBalance}</p>
+            </div>
+            <button onClick={()=> navigate("/child/lesson")}className="dash-button">I want to collect coins!</button>
+            <ChildNav/>
         </div>
     )
 }

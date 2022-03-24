@@ -1,0 +1,41 @@
+.piggy-container {
+    width: 674px;
+    height: 414px;
+    background: #FFFFFF;
+    border-radius: 20px;
+}
+
+.piggy-container img {
+    margin-top: 20px;;
+    background: none;
+}
+
+.child-dashboard{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.child-dashboard p {
+    margin-top: 10px;
+    background: none;
+    color: #5BC0E5;
+    font-size: 34px;
+    line-height: 46px;
+}
+
+.child-dashboard button {
+    position: absolute;
+    width: 442px;
+    height: 72px;
+    left: 196px;
+    top: 851px;
+    background: #FFFFFF;
+    border: 3px solid #2B3856;
+    box-sizing: border-box;
+    border-radius: 20px;
+    color: #2B3856;
+    font-size: 34px;
+    padding: 5px;
+}
