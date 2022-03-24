@@ -7,8 +7,13 @@ import ProgressSection from '../../components/QuizComponents/ProgressSection/Pro
 import QnADisplay from '../../components/QuizComponents/QnADisplay/QnADisplay'
 import QuizQuestionHeader from '../../components/QuizComponents/QuizQuestionHeader/QuizQuestionHeader'
 import './Quiz.css'
+import React from 'react'
+import useWindowSize from 'react-use/lib/useWindowSize'
+import Confetti from 'react-confetti'
+
 
 function Quiz() {
+  const { width, height } = useWindowSize()
   const location = useLocation();
   const [lessonData, setLessonData] = useState(location.state.lessonData);
   const [questionList,setQuestionList] = useState(lessonData.quiz)
@@ -20,6 +25,7 @@ function Quiz() {
   const [selectedRadioButtonEvent, setSelectedRadioButtonEvent] = useState(0)
   const correctAnswerRef = useRef();
   const [explanationVisibility, setExplanationVisibility] = useState('hidden')
+  const [showConfetti, setShowConfetti] = useState(false) ;
   const [timer, setTimer] = useState(0)
   function checkAnswer(){
 
@@ -37,6 +43,9 @@ function Quiz() {
   return (
     //total height is 85vh, 10 vh expected for nav and 5vh expected for header
     <div className="quiz-page">
+      <div className="confetti-div">
+      {showConfetti && <Confetti width={width} height={height}/>}
+      </div>
       <ProgressSection 
       numberOfQuestions = {questionList.length}
       currentQuestion={currentQuestion}
@@ -81,7 +90,8 @@ function Quiz() {
 
       correctAnswerRef = {correctAnswerRef}
       explanationVisibility={explanationVisibility}
-      setExplanationVisibility={setExplanationVisibility}/>:
+      setExplanationVisibility={setExplanationVisibility}
+      setShowConfetti = {setShowConfetti}/>:
       <NextQuestion 
       questions = {questionList}
       currentQuestion={currentQuestion}
@@ -103,7 +113,9 @@ function Quiz() {
       
       
       explanationVisibility = {explanationVisibility}
-      setExplanationVisibility = {setExplanationVisibility}/>
+      setExplanationVisibility = {setExplanationVisibility}
+      setShowConfetti = {setShowConfetti}
+      />
     }
     </div>
     <ChildNav />

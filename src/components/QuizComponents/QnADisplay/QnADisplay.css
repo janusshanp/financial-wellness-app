@@ -11,7 +11,7 @@
   background:white;
   display:grid;
   grid-template-columns:1vw 5vw 58vw 5vw 1vw;
-  grid-template-rows: 15vh 3vh 45vh; 
+  grid-template-rows: 15vh 3vh 25vh; 
   overflow-y: scroll;
 
   grid-template-areas:

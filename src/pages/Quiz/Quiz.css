@@ -14,7 +14,10 @@
 .quiz-question-header{
   grid-area:header
 }
+.confetti-div > * {
+  background: rgba(0,0,0,0)
 
+}
 .quiz-page{
   height:85vh;
   display:grid;
