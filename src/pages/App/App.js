@@ -21,25 +21,6 @@ import LessonDescription from '../../components/LessonDescription/LessonDescript
 import LessonStory from '../../components/LessonStory/LessonStory';
 
 function App() {
-  const questions = [
-    {
-      question:"What should you do?",
-      answers:['Spend', 'Save', 'Budget', 'Invest'],
-      correctAnswer:'Invest',
-      explanation: "Investing is just the right thing to do"
-    },
-    {
-      question:"Who should you invest in?",
-      answers:['Tesla', 'GME', 'Yourself', 'This hackathon'],
-      correctAnswer:'Tesla',
-      explanation: 'Lowest rated EV, highest rated sigma male'
-    },
-    {
-      question:"What is antiwork?",
-      answers:['Not the move', 'Definitely the move', 'Move to a cheaper location', 'Move your body to the rythm'],
-      correctAnswer:'Move to a cheaper location',
-      explanation: 'just move your body'
-    }]
 
   // const [loggedInUser, setLoggedInUser] = useState(null)
 
