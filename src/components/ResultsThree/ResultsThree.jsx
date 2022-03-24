@@ -13,15 +13,16 @@ export default function ResultsThree(props) {
     return (
     <div>
         <div className="lesson-start">
-            {/* <h1>OinkOink!</h1>
+            <h1>OinkOink!</h1>
             <p>I love coins</p>
             <img src={require('../../images/piggy_with_coins_transparent.png')} id="piggy-with-coins-transparent"/>
             <br></br>
             <button 
-                onClick={()=> navigate(`/lesson/${lessonData._id}/description`,{state: {lessonData}})}
+            //MVP navigate update
+                onClick={()=> navigate(`/parent/dashboard`)}
                 className="lesson-button"
             >Next</button>
-            <ChildNav/> */}
+            <ChildNav/>
         </div>
         
     </div>
