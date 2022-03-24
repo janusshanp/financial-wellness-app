@@ -20,6 +20,7 @@ function Quiz() {
   const [selectedRadioButtonEvent, setSelectedRadioButtonEvent] = useState(0)
   const correctAnswerRef = useRef();
   const [explanationVisibility, setExplanationVisibility] = useState('hidden')
+  const [timer, setTimer] = useState(0)
   function checkAnswer(){
 
   }
