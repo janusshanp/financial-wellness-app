@@ -4,52 +4,66 @@ import Button from 'react-bootstrap/Button';
 import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
 import { useEffect } from 'react';
 
-function AnswerContainer({questions, currentQuestion, setCurrentQuestion, options, setOptions}) {
+function AnswerContainer({questions, currentQuestion, setCurrentQuestion, options, setOptions, radioBtnValue, setRadioBtnValue, selectedRadioButtonEvent, setSelectedRadioButtonEvent, correctAnswerRef, explanationVisibility, setExplanationVisibility}) {
   const popover = (
     <Popover id="popover-basic">
-      <Popover.Header as="h3">Popover right</Popover.Header>
+      <Popover.Header as="h3">Why is this correct?</Popover.Header>
       <Popover.Body>
-        And here's some <strong>amazing</strong> content. It's very engaging.
-        right?
+      {questions[currentQuestion].explanation}
       </Popover.Body>
     </Popover>
   );
   
   const Example = () => (
-    <OverlayTrigger trigger="click" placement="right" overlay={popover}>
-      <Button variant="success">Click me to see</Button>
+    <span style={{visibility:explanationVisibility}} className="explain-pop hide">
+    <OverlayTrigger trigger="click" placement="left" overlay={popover}>
+      <Button variant="success">Why?</Button>
     </OverlayTrigger>
+    </span>
   );
-  const MyButton = () =>(
-    <button></button>
-  )
+  const randomizeAnswerOrder = (answers) =>{
+    return answers.sort(()=>Math.random()-0.5);
+  };
   useEffect(()=>{
     if(options){
-      console.log('options 123', options)
-      console.log('rightanswer', questions[currentQuestion].correctAnswer)
+      setOptions(questions && randomizeAnswerOrder([...questions[currentQuestion]?.answers]))
     }
-  },[options, questions]);
+  },[currentQuestion]);
 
-  const myList = [1,2,3,4]
+  //Change Answer value
+  function changeRadioButton(e){
+    setRadioBtnValue(e.target.value);
+    setSelectedRadioButtonEvent(e.target);
+  }
+
   return (
     
 
     <div className="answer-container">
-    { options ? 
-    <div>
-      {options.map((element)=>(
-      element === questions[currentQuestion].correctAnswer ? <button className="home-button">
-        {element} answer
-      </button>:
-    <Button>{element}</Button>)) }
-    
+
+
+{ options ? 
+    <>
+      {options.map((element, i)=>(
+      element === questions[currentQuestion].correctAnswer ? 
+      <div ref={correctAnswerRef} className="answer-option">
+        <input className="answer-radio" onChange={changeRadioButton} name={currentQuestion} value={element} id={element} type="radio"/>
+        <label className="answer-label" htmlFor={element}>{element} Answer</label>
+        <Example />
+      </div>
+      :
+    <div className="answer-option">
+      <input onChange={changeRadioButton} className="answer-radio" name={currentQuestion} value={element} id={element} type="radio"/>
+      <label className="answer-label" htmlFor={element}>{element}</label>
     </div>
+)) }
+    
+    </>
     : "Loading"
   }
 
-  { options ?
-  <button>hi</button> : <button>THS WORKED</button>
-}
+
+
     
     
   </div>
