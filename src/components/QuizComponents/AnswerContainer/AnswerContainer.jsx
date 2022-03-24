@@ -6,15 +6,18 @@ import { useEffect } from 'react';
 
 function AnswerContainer({questions, currentQuestion, setCurrentQuestion, options, setOptions, radioBtnValue, setRadioBtnValue, selectedRadioButtonEvent, setSelectedRadioButtonEvent, correctAnswerRef, explanationVisibility, setExplanationVisibility}) {
   const popover = (
+    <div className="popover-banner">
     <Popover id="popover-basic">
       <Popover.Header as="h3">Why is this correct?</Popover.Header>
       <Popover.Body>
       {questions[currentQuestion].explanation}
       </Popover.Body>
     </Popover>
+    </div>
+      
   );
   
-  const Example = () => (
+  const Explanation = () => (
     <span style={{visibility:explanationVisibility}} className="explain-pop hide">
     <OverlayTrigger trigger="click" placement="left" overlay={popover}>
       <Button variant="success">Why?</Button>
@@ -50,7 +53,7 @@ function AnswerContainer({questions, currentQuestion, setCurrentQuestion, option
       <div ref={correctAnswerRef} className="answer-option">
         <input className="answer-radio" onChange={changeRadioButton} name={currentQuestion} value={element} id={element} type="radio"/>
         <label className="answer-label" htmlFor={element}>{element}</label>
-        <Example />
+        <Explanation />
       </div>
       :
     <div className="answer-option">

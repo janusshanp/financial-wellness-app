@@ -5,9 +5,10 @@ import CheckAnswer from '../../components/QuizComponents/CheckAnswer/CheckAnswer
 import NextQuestion from '../../components/QuizComponents/NextQuestion/NextQuestion'
 import ProgressSection from '../../components/QuizComponents/ProgressSection/ProgressSection'
 import QnADisplay from '../../components/QuizComponents/QnADisplay/QnADisplay'
+import QuizQuestionHeader from '../../components/QuizComponents/QuizQuestionHeader/QuizQuestionHeader'
 import './Quiz.css'
 
-function Quiz({questions}) {
+function Quiz() {
   const location = useLocation();
   const [lessonData, setLessonData] = useState(location.state.lessonData);
   const [questionList,setQuestionList] = useState(lessonData.quiz)
@@ -24,8 +25,8 @@ function Quiz({questions}) {
   }
 
     useEffect(()=>{
-      questions = location.state.lessonData.quiz
-      setOptions(questions && randomizeAnswerOrder([...questions[currentQuestion]?.answers]))
+      // questions = location.state.lessonData.quiz
+      setOptions(questionList && randomizeAnswerOrder([...questionList[currentQuestion]?.answers]))
     },[]);
     // console.log(options)
     
@@ -36,8 +37,14 @@ function Quiz({questions}) {
     //total height is 85vh, 10 vh expected for nav and 5vh expected for header
     <div className="quiz-page">
       <ProgressSection 
-      numberOfQuestions = {questions.length}
+      numberOfQuestions = {questionList.length}
       currentQuestion={currentQuestion}
+      />
+      <QuizQuestionHeader
+      imgUrl = {lessonData.imgUrl}
+      questions = {questionList}
+      currentQuestion={currentQuestion}
+      hint = {questionList[currentQuestion].hint}
       />
       <QnADisplay 
       questions = {questionList}

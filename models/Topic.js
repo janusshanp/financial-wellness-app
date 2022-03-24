@@ -5,6 +5,7 @@ const questionSchema = new Schema({
   question: {type:String, required: true},// Is it a b or c
   answers:[{type: String, required: true}], //a, b, c
   correctAnswer:{type: String, required: true}, // c
+  hint:{type:String, required:true},
   explanation: {type: String, required: true, maxlength:120}
 })
 
