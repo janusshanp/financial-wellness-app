@@ -7,7 +7,6 @@ export default function LessonStory(props) {
   const location = useLocation();
   const [lessonData, setLessonData] = useState(location.state.lessonData);
 
-
   let navigate = useNavigate();
 
   return (
@@ -20,6 +19,7 @@ export default function LessonStory(props) {
         <br></br>
         
       </div>
+      
       <button
         onClick={() =>
           navigate(`/quiz`, {
@@ -28,7 +28,7 @@ export default function LessonStory(props) {
         }
         className="lesson-button"
       >
-        OK!
+        Quiz!
       </button>
       <ChildNav />
     </div>

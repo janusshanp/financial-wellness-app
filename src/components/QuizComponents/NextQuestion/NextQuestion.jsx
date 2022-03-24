@@ -1,7 +1,13 @@
 import { useEffect, useState } from 'react';
 import './NextQuestion.css'
+import {useNavigate, useLocation} from 'react-router-dom'
 
 function NextQuestion({questions, currentQuestion, setCurrentQuestion, options, setOptions, numberOfQuestions, checkOrNext, setCheckOrNext, nextOrContinue, setNextOrContinue,radioBtnValue, setRadioBtnValue, selectedRadioButtonEvent, setSelectedRadioButtonEvent, correctAnswerRef, explanationVisibility, setExplanationVisibility}) {
+  const location = useLocation()
+  const [lessonData, setLessonData] = useState(location.state.lessonData)
+  
+  let navigate = useNavigate();
+
   const [disabledState, setDisabledState] = useState(false)
   useEffect(()=>{
     console.log('questions NULLL', questions);
@@ -16,8 +22,9 @@ function NextQuestion({questions, currentQuestion, setCurrentQuestion, options, 
    selectedRadioButtonEvent.parentElement.style.opacity="1";
    correctAnswerRef.current.style.border="";
    if (nextOrContinue ==="Continue"){
-     console.log('CONTINUE TO LESSON PATH!')
-     return
+     //MVP ADD TO BALANCE
+     //MVP Complete Topic boolean
+    navigate(`/lesson/${lessonData._id}/story`,{state: {lessonData}})
    }
 
    if(currentQuestion+1 === numberOfQuestions){
