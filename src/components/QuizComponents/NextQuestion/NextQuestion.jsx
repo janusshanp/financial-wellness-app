@@ -4,7 +4,7 @@ import {useNavigate, useLocation} from 'react-router-dom'
 
 function NextQuestion({questions, currentQuestion, setCurrentQuestion, options, setOptions, numberOfQuestions, checkOrNext, setCheckOrNext, nextOrContinue, setNextOrContinue,radioBtnValue, setRadioBtnValue, selectedRadioButtonEvent, setSelectedRadioButtonEvent, correctAnswerRef, explanationVisibility, setExplanationVisibility}) {
   const location = useLocation()
-  const [lessonData, setLessonData] = useState(location.state.lessonData)
+  // const [lessonData, setLessonData] = useState(location.state.lessonData)
   
   let navigate = useNavigate();
 
@@ -24,7 +24,7 @@ function NextQuestion({questions, currentQuestion, setCurrentQuestion, options, 
    if (nextOrContinue ==="Continue"){
      //MVP ADD TO BALANCE
      //MVP Complete Topic boolean
-    navigate(`/lesson/${lessonData._id}/story`,{state: {lessonData}})
+    navigate(`/results/one`)
    }
 
    if(currentQuestion+1 === numberOfQuestions){
