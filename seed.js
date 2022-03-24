@@ -1,7 +1,7 @@
 require('dotenv').config();
 require('./config/database');
 
-const Topic = require('./models/topic');
+const Topic = require('./models/Topic');
 
 
 
@@ -15,24 +15,24 @@ async function populateDB(){
         quiz: [
             {
                 question: 'When I buy something, I give them money, and then they give me something in return. True or False?' ,
-                answer: ['True', 'False'],
+                answers: ['True', 'False'],
                 correctAnswer: 'True',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: 'Should I spend money as soon as I get it?' ,
-                answer: ['Yes', 'Before any spending, I need to think it through', 'No'],
-                correctAnswer: 'Should I spend money as soon as I get it?',
+                answers: ['Yes', 'Before any spending, I need to think it through', 'No'],
+                correctAnswer: 'Before any spending, I need to think it through',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: "Should I spend money I don't have" ,
-                answer: ['Yes', 'No'],
+                answers: ['Yes', 'No'],
                 correctAnswer: 'No',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             }
         ],
         title: 'Spending',
@@ -45,24 +45,24 @@ async function populateDB(){
         quiz: [
             {
                 question: 'When I buy something, I give them money, and then they give me something in return. True or False?' ,
-                answer: ['True', 'False'],
+                answers: ['True', 'False'],
                 correctAnswer: 'True',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: 'Should I spend money as soon as I get it?' ,
-                answer: ['Yes', 'Before any spending, I need to think it through', 'No'],
-                correctAnswer: 'Should I spend money as soon as I get it?',
+                answers: ['Yes', 'Before any spending, I need to think it through', 'No'],
+                correctAnswer: 'Before any spending, I need to think it through',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: "Should I spend money I don't have" ,
-                answer: ['Yes', 'No'],
+                answers: ['Yes', 'No'],
                 correctAnswer: 'No',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             }
         ],
         title: 'Savings',
@@ -75,24 +75,24 @@ async function populateDB(){
         quiz: [
             {
                 question: 'When I buy something, I give them money, and then they give me something in return. True or False?' ,
-                answer: ['True', 'False'],
+                answers: ['True', 'False'],
                 correctAnswer: 'True',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: 'Should I spend money as soon as I get it?' ,
-                answer: ['Yes', 'Before any spending, I need to think it through', 'No'],
-                correctAnswer: 'Should I spend money as soon as I get it?',
+                answers: ['Yes', 'Before any spending, I need to think it through', 'No'],
+                correctAnswer: 'Before any spending, I need to think it through',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: "Should I spend money I don't have" ,
-                answer: ['Yes', 'No'],
+                answers: ['Yes', 'No'],
                 correctAnswer: 'No',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             }
         ],
         title: 'Needs vs Wants',
@@ -105,24 +105,24 @@ async function populateDB(){
         quiz: [
             {
                 question: 'When I buy something, I give them money, and then they give me something in return. True or False?' ,
-                answer: ['True', 'False'],
+                answers: ['True', 'False'],
                 correctAnswer: 'True',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: 'Should I spend money as soon as I get it?' ,
-                answer: ['Yes', 'Before any spending, I need to think it through', 'No'],
-                correctAnswer: 'Should I spend money as soon as I get it?',
+                answers: ['Yes', 'Before any spending, I need to think it through', 'No'],
+                correctAnswer: 'Before any spending, I need to think it through',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: "Should I spend money I don't have" ,
-                answer: ['Yes', 'No'],
+                answers: ['Yes', 'No'],
                 correctAnswer: 'No',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             }
         ],
         title: 'Investments',
@@ -135,24 +135,24 @@ async function populateDB(){
         quiz: [
             {
                 question: 'When I buy something, I give them money, and then they give me something in return. True or False?' ,
-                answer: ['True', 'False'],
+                answers: ['True', 'False'],
                 correctAnswer: 'True',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: 'Should I spend money as soon as I get it?' ,
-                answer: ['Yes', 'Before any spending, I need to think it through', 'No'],
-                correctAnswer: 'Should I spend money as soon as I get it?',
+                answers: ['Yes', 'Before any spending, I need to think it through', 'No'],
+                correctAnswer: 'Before any spending, I need to think it through',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: "Should I spend money I don't have" ,
-                answer: ['Yes', 'No'],
+                answers: ['Yes', 'No'],
                 correctAnswer: 'No',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             }
         ],
         title: 'Electronic Money',
@@ -165,24 +165,24 @@ async function populateDB(){
         quiz: [
             {
                 question: 'When I buy something, I give them money, and then they give me something in return. True or False?' ,
-                answer: ['True', 'False'],
+                answers: ['True', 'False'],
                 correctAnswer: 'True',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: 'Should I spend money as soon as I get it?' ,
-                answer: ['Yes', 'Before any spending, I need to think it through', 'No'],
-                correctAnswer: 'Should I spend money as soon as I get it?',
+                answers: ['Yes', 'Before any spending, I need to think it through', 'No'],
+                correctAnswer: 'Before any spending, I need to think it through',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: "Should I spend money I don't have" ,
-                answer: ['Yes', 'No'],
+                answers: ['Yes', 'No'],
                 correctAnswer: 'No',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             }
         ],
         title: 'Credit',
@@ -195,24 +195,24 @@ async function populateDB(){
         quiz: [
             {
                 question: 'When I buy something, I give them money, and then they give me something in return. True or False?' ,
-                answer: ['True', 'False'],
+                answers: ['True', 'False'],
                 correctAnswer: 'True',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: 'Should I spend money as soon as I get it?' ,
-                answer: ['Yes', 'Before any spending, I need to think it through', 'No'],
-                correctAnswer: 'Should I spend money as soon as I get it?',
+                answers: ['Yes', 'Before any spending, I need to think it through', 'No'],
+                correctAnswer: 'Before any spending, I need to think it through',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: "Should I spend money I don't have" ,
-                answer: ['Yes', 'No'],
+                answers: ['Yes', 'No'],
                 correctAnswer: 'No',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             }
         ],
         title: 'Banking',
@@ -225,24 +225,24 @@ async function populateDB(){
         quiz: [
             {
                 question: 'When I buy something, I give them money, and then they give me something in return. True or False?' ,
-                answer: ['True', 'False'],
+                answers: ['True', 'False'],
                 correctAnswer: 'True',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: 'Should I spend money as soon as I get it?' ,
-                answer: ['Yes', 'Before any spending, I need to think it through', 'No'],
-                correctAnswer: 'Should I spend money as soon as I get it?',
+                answers: ['Yes', 'Before any spending, I need to think it through', 'No'],
+                correctAnswer: 'Before any spending, I need to think it through',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             },
             {
                 question: "Should I spend money I don't have" ,
-                answer: ['Yes', 'No'],
+                answers: ['Yes', 'No'],
                 correctAnswer: 'No',
                 hint: 'Dont worry you got this because blah blah blah blah',
-                explanation: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi'
+                explanation: 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis nat'
             }
         ],
         title: 'Budgeting',
