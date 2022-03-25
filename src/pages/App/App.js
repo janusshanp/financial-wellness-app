@@ -57,14 +57,14 @@ function App() {
           <Route path="/parent/switch" element={<ParentSwitch setChildUser={setChildUserInState} user={loggedInUser}/>} />
           <Route path="/child/signup" element={<ChildSignUp setChildUser={setChildUserInState} setUserInState={setUserInState}/>} />
           <Route path="/child/dashboard" element={<ChildDashboard childUser={childUser} />} />
-          <Route path="/lesson/:lessonId" element={<LessonStart/>} />
-          <Route path="/lesson/:lessonId/description" element={<LessonDescription/>} />
-          <Route path="/lesson/:lessonId/story" element={<LessonStory/>} />
+          <Route path="/lesson/:lessonId" element={<LessonStart childUser={childUser}/>} />
+          <Route path="/lesson/:lessonId/description" element={<LessonDescription childUser={childUser}/>} />
+          <Route path="/lesson/:lessonId/story" element={<LessonStory childUser={childUser}/>} />
           {/* <Route path="/lesson/:lessonId/quiz" element={<LessonStart/>} /> */}
-          <Route path="/child/lesson" element={<TopicList/>} />
-          <Route path="/results/one" element={<ResultsOne/>} />
-          <Route path="/results/two" element={<ResultsTwo/>} />
-          <Route path="/results/three" element={<ResultsThree/>} />
+          <Route path="/child/lesson" element={<TopicList childUser={childUser}/>} />
+          <Route path="/results/one" element={<ResultsOne childUser={childUser}/>} />
+          <Route path="/results/two" element={<ResultsTwo childUser={childUser}/>} />
+          <Route path="/results/three" element={<ResultsThree childUser={childUser}/>} />
           <Route path="/signup" element={<SignUpForm/>}/>
           <Route path="*" element={<Navigate to="/" />}/>
         </Routes>

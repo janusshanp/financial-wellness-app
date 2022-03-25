@@ -2,6 +2,7 @@ import "./ResultsOne.css";
 import { useState } from "react";
 import {useNavigate, useLocation} from 'react-router-dom'
 import ChildNav from '../ChildNav/ChildNav'
+import ChildHeader from "../ChildHeader/ChildHeader";
 
 
 export default function ResultsOne(props) {
@@ -13,6 +14,7 @@ export default function ResultsOne(props) {
     return (
     <div>
         <div className="lesson-start">
+            <ChildHeader childUser={props.childUser}/>
             <h1>OinkOink!</h1>
             <p>I love coins</p>
             <img src={require('../../images/piggy_path_coins.png')} id="piggy-coins"/>

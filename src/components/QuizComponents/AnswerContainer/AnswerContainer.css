@@ -29,6 +29,15 @@
 .explain-pop{
   float:right;
   visibility:hidden;
+  background: transparent;
+}
+
+
+.explain-pop button{
+  background:#2B3856;
+  padding:13px;
+  border-radius: 20px;
+
 }
 
 .hide{

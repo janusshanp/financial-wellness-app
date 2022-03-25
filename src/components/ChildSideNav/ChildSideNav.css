@@ -3,9 +3,11 @@
     z-index: 10;
     width: 565px;
     height: 1194px;
-    position: fixed;
+    position: absolute;
     left: -565px;
     transition: .8s;
+    top:0;
+    text-align: left;
 }
 
 .child-side-nav.active{

@@ -12,7 +12,7 @@ export default function LessonStory(props) {
 
   return (
     <div className="story-page">
-      <ChildHeader/>
+      <ChildHeader childUser={props.childUser}/>
       <h1>{lessonData.storyTitle}</h1>
       <div className="lesson-story">
         

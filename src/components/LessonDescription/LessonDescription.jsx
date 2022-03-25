@@ -13,7 +13,7 @@ export default function LessonDescription(props) {
 
     return (
     <div>
-        <ChildHeader/>
+        <ChildHeader childUser={props.childUser}/>
         <div className='lesson-description'>
             <div>
             <h1>{lessonData.title}</h1>

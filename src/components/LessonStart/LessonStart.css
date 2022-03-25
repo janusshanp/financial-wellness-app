@@ -1,6 +1,6 @@
 .lesson-button {
     width: 252px;
-    height: 81px;
+    height: 72px;
     background: white;
     border-radius: 20px;
     color: #5BC0E5;
@@ -13,7 +13,12 @@
     
 }
 
+.lesson-topic-image{
+    height:100px;
+
+}
+
 #piggy-coins {
     max-width: 60%;
-    padding: 15px;
+    /* padding: 15px; */
 }

@@ -11,6 +11,8 @@
 #description-text {
     font-size: 3vh;
     padding-bottom: 50px;
+    margin-top: 4vh;
+
 }
 
 .description-wrapper {
@@ -24,8 +26,13 @@
     align-self: center;
     margin-left: 10vw;
 }
-.lesson-big-button {
-
+.lesson-big-button{
+    width: 329px;
+    height: 128px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    color: #5BC0E5;
+    font-size: 4vh;
 }
 
 /* .description-image {

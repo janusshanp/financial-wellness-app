@@ -13,10 +13,10 @@ export default function LessonStart(props) {
 
     return (
     <div>
-        <ChildHeader/>
+        <ChildHeader childUser={props.childUser} />
         <div className="lesson-start">
             <h1>{lessonData.title}</h1>
-            <img src={require('../../images/' + lessonData.imgUrl )}></img>
+            <img className="lesson-topic-image" src={require('../../images/' + lessonData.imgUrl )}></img>
             <p>Help Piggy collect all the coins and Jackpot!</p>
             <img src={require('../../images/piggy_path_coins.png')} id="piggy-coins"/>
             <br></br>

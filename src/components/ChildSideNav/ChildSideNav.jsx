@@ -20,9 +20,9 @@ export default function ChildSideNav(props){
     return(
         <div className="child-side-nav">
             <div className="child-side-nav-top">
-                <img src={require('../../images/parent.jpeg')}></img>
+                <img src={props.childUser.avatarUrl}></img>
                 <div>
-                    Name of Child
+                    {props.childUser.name}
                 </div>
             </div>
             <div className="border-bottom"></div>

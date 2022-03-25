@@ -2,6 +2,7 @@ import "./ResultsThree.css";
 import { useState } from "react";
 import {useNavigate, useLocation} from 'react-router-dom'
 import ChildNav from '../ChildNav/ChildNav'
+import ChildHeader from "../ChildHeader/ChildHeader";
 
 
 export default function ResultsThree(props) {
@@ -13,6 +14,7 @@ export default function ResultsThree(props) {
     return (
     <div>
         <div className="lesson-start">
+            <ChildHeader childUser={props.childUser}/>
         <img src={require('../../images/great_job.png')} id="great-job"/>
             
             <p id="won">You have won $3!</p>

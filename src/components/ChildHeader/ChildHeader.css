@@ -26,3 +26,21 @@
 .child-header {
     margin-bottom: 170px;;
 }
+
+.streak-number
+{
+    position: absolute;
+    right: 11.2vh;
+    top: 9vh;
+    color: black;
+    background-color: transparent;
+    font-size: 4vmin;
+    z-index: 6;
+    font-weight: 700;
+
+}
+.streak-header-item{
+  position:relative;
+  text-align: center;
+  color:blue
+}

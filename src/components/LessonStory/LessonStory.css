@@ -1,10 +1,3 @@
-.lesson-big-button{
-    width: 329px;
-    height: 128px;
-    background: #FFFFFF;
-    border-radius: 20px;
-    color: #5BC0E5;
-}
 
 .lesson-story {
     text-align: center;
@@ -30,4 +23,6 @@
 
 .lesson-story img {
     max-width: 65%;
+    height:210px;
+
 }

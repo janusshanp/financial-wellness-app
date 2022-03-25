@@ -4,7 +4,7 @@ import TopicSelector from "../TopicSelector/TopicSelector";
 import ChildNav from "../ChildNav/ChildNav"
 import ChildHeader from "../ChildHeader/ChildHeader";
 
-function TopicList() {
+function TopicList(props) {
   const [topics, setTopics] = useState(false)
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function TopicList() {
 
   return (
     <div className="topic-page">
-      <ChildHeader/>
+      <ChildHeader childUser={props.childUser}/>
       <h1>What do you want to learn today?</h1>
       {/* <img src={require('../../images/' + topics[1].imgUrl)}></img> */}
         {topics ?

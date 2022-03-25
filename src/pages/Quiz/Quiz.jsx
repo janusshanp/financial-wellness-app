@@ -45,7 +45,7 @@ function Quiz({childUser, setChildUser}) {
   return (
     //total height is 85vh, 10 vh expected for nav and 5vh expected for header
     <div className="quiz-page">
-      <ChildHeader />
+      <ChildHeader childUser={childUser}/>
       <div className="confetti-div">
       {showConfetti && <Confetti width={width} height={height}/>}
       </div>
