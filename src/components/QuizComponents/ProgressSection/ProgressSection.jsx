@@ -43,14 +43,12 @@ function ProgressSection({numberOfQuestions, currentQuestion}) {
       {message}
       </div>
       <div className="user-img">
-        <img src={require(`../../../images/avatar_dog.png`)}></img>
       </div>
       <div className="image-score">
         <div className="image">
-        <img src={require(`../../../images/avatar_polar_bear.png`)}></img>
         </div>
           <div className="score">
-            1
+            {/* 1 */}
           </div>
       </div>
       <ProgressBar 

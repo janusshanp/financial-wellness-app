@@ -10,6 +10,7 @@ import './Quiz.css'
 import React from 'react'
 import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
+import ChildHeader from '../../components/ChildHeader/ChildHeader'
 
 
 function Quiz({childUser, setChildUser}) {
@@ -44,6 +45,7 @@ function Quiz({childUser, setChildUser}) {
   return (
     //total height is 85vh, 10 vh expected for nav and 5vh expected for header
     <div className="quiz-page">
+      <ChildHeader />
       <div className="confetti-div">
       {showConfetti && <Confetti width={width} height={height}/>}
       </div>

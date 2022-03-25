@@ -1,6 +1,7 @@
 .child-header img {
     width: 100px;
     height: 100px;
+    z-index: 5;
 }
 
 .child-header-avatar {
@@ -12,7 +13,7 @@
 
 .child-header-fire {
     position: absolute;
-    left: 692px;
+    right: 90px;
     top: 60px;
 }
 

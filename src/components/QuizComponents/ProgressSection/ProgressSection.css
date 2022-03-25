@@ -14,11 +14,13 @@
 .score
 {
   position:absolute;
-  right:50%;
-  left:50%;
-  bottom:15%;
+  right:95px;
+  margin-top:30px;
   color:black;
+  background-color:transparent;
   font-size:4vmin;
+  z-index: 6;
+  font-weight: 700;
 }
 .image-score{
   position:relative;
@@ -53,7 +55,7 @@
   margin-top:3vh;
   display:grid;
   grid-template-columns:4.5vw 20vw 0.5vw 50vw 0.5vw 20vw 4.5vw;
-  grid-template-rows: 0.5vh 1.25vh 0.5vh 1.5vh 0.5vh 1.25vh 0.5vh; 
+  grid-template-rows: 2vh 1.25vh 0.5vh 1.5vh 0.5vh 1.25vh 0.5vh; 
   /* overflow-y: scroll; */
 
   grid-template-areas:

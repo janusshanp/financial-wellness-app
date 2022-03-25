@@ -14,12 +14,13 @@ function CheckAnswer({questions, currentQuestion, setCurrentQuestion, options, s
   if (radioBtnValue === questions[currentQuestion].correctAnswer){
     //Styling applied to components
     setShowConfetti(true)
-    selectedRadioButtonEvent.parentElement.style.border="2px dashed green";
+    selectedRadioButtonEvent.parentElement.children[1].style.color="green";
   }
   else{
     //Styling applied to incorrect component and correct component
     selectedRadioButtonEvent.parentElement.style.border="2px dashed red";
-    correctAnswerRef.current.style.border = "2px solid green"
+    // console.log(correctAnswerRef.current)
+    correctAnswerRef.current.children[1].style.color = "green"
     selectedRadioButtonEvent.parentElement.style.opacity="0.5";
 
   }

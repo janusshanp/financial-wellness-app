@@ -53,10 +53,12 @@ function NextQuestion({questions, currentQuestion, setCurrentQuestion, options, 
    selectedRadioButtonEvent.checked=false;
    selectedRadioButtonEvent.parentElement.style.border=""
    selectedRadioButtonEvent.parentElement.style.opacity="1";
-   correctAnswerRef.current.style.border="";
+  //  console.log(correctAnswerRef.current.children[1])
+   correctAnswerRef.current.children[1].style.color="";
    if (nextOrContinue ==="Continue"){
      //ICEBOX Complete Topic boolean
-     updateBalance(childUser.totalBalance + 3, childUser._id);
+     let newBalance = childUser.totalBalance + 3;
+     updateBalance(newBalance, childUser._id);
     //  console.log(childUser.totalBalance)
     navigate(`/results/one`)
    }
