@@ -33,6 +33,7 @@ export default function ParentDashboard(props){
             {/* {activeNav ? <ParentSideNav name={props.user.name}/> : false} */}
             <div className="parent-header">
                 <img 
+                    className="parent-img"
                     onClick={openNav}
                     src={require('../../images/parent.jpeg')}>
                 </img>

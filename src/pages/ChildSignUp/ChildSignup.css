@@ -25,11 +25,15 @@
     font-size: 60px;
     color: #2B3856;
     box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center
 }
 
 .avatar-container {
     display: flex;
     flex-direction: column;
+    margin-top:22vh;
 }
 
 .avatar-container img {
@@ -41,14 +45,22 @@
 }
 
 .signup-header {
+    position:absolute;
     text-align: center;
     font-size: 50px;
+    left:20%;
+    right:20%;
+    top: 12%;
 }
 
 .signup-steps {
     text-align: center;
+    margin-top:24vh;
 }
+.signup-step-1{
+    margin-top:33vh;
 
+}
 .signup-button {
     position: absolute;
     width: 367px;

@@ -80,7 +80,7 @@ export default function ChildSignUp(props){
     return(
         <div>
             {step1 ? 
-            <div className="signup-steps">
+            <div className="signup-steps signup-step-1">
                 <h1 className="signup-header">What is your name?</h1>
                 <input 
                     className="signup-name-input" 
