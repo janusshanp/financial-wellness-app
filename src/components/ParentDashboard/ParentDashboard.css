@@ -12,7 +12,10 @@
     font-size: 34px;
     margin: 55px;
 }
+.child-box > *{
+    background:transparent;
 
+}
 .parent-img{
     /* position: absolute; */
     width: 28vmin;
