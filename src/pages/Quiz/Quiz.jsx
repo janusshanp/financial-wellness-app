@@ -12,7 +12,7 @@ import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
 
 
-function Quiz() {
+function Quiz({childUser}) {
   const { width, height } = useWindowSize()
   const location = useLocation();
   const [lessonData, setLessonData] = useState(location.state.lessonData);
@@ -33,6 +33,7 @@ function Quiz() {
 
     useEffect(()=>{
       // questions = location.state.lessonData.quiz
+      console.log('ChildUser', childUser)
       setOptions(questionList && randomizeAnswerOrder([...questionList[currentQuestion]?.answers]))
     },[]);
     // console.log(options)

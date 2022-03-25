@@ -7,6 +7,25 @@ module.exports = {
     Parentcreate,
     login,
     childCreate,
+    updateChildBalance
+}
+async function updateChildBalance(req,res){
+    //find by id and assign to child object
+    //child object.balance = req.body.balance
+    //child object.save
+    console.log('req body',req.body)
+    try{
+        //might need to change id param
+        let childObject = await Child.findById(req.child._id)
+        console.log(childObject)
+        childObject.balance = req.body.balance
+        await childObject.save()
+        res.status(200).json(childObject)
+    }
+    catch(err){
+        res.status(400).json(err)
+    }
+
 }
 
 async function childCreate(req,res){
