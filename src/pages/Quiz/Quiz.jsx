@@ -12,7 +12,7 @@ import useWindowSize from 'react-use/lib/useWindowSize'
 import Confetti from 'react-confetti'
 
 
-function Quiz({childUser}) {
+function Quiz({childUser, setChildUser}) {
   const { width, height } = useWindowSize()
   const location = useLocation();
   const [lessonData, setLessonData] = useState(location.state.lessonData);
@@ -116,6 +116,9 @@ function Quiz({childUser}) {
       explanationVisibility = {explanationVisibility}
       setExplanationVisibility = {setExplanationVisibility}
       setShowConfetti = {setShowConfetti}
+
+      childUser={childUser}
+      setChildUser={setChildUser}
       />
     }
     </div>
