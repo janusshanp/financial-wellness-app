@@ -36,7 +36,8 @@ async function populateDB(){
             }
         ],
         title: 'Spending',
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco nisi',
+        description: 'Are you excited to learn about the importance of money? I know I am!\
+        Let’s read a story together and win some coins!',
         lessonText: 'Long ago in a meadow by the forest — not far from that mean old wolf’s house — a young grasshopper was enjoying his summer, never bothering to save for the future. He loved playing his fiddle and making music for the other insects. He even bought a fancier, more expensive fiddle with a credit card. His friend the ant, however, was different. He was often working, saving and planning for the future. The grasshopper liked the ant, but didn’t pay much attention when the ant tried to tell him about saving. He was more concerned with living in the moment. Before the grasshopper knew it, summer was over. It was cold, and his heating bill was getting bigger. The grasshopper’s credit cards were maxed out, and he was running out of money. Worst of all, he was nearing retirement (bugs don’t live very long).'
     },
     {

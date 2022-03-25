@@ -1,5 +1,6 @@
 .lesson-description {
     text-align: center;
+    padding: 80px 0;
 }
 
 #piggy-coins {
@@ -7,3 +8,26 @@
     padding: 15px;
 }
 
+#description-text {
+    font-size: 3vh;
+    padding-bottom: 50px;
+}
+
+.description-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    height: 40vh;
+    align-items: center;
+    width: 80vw;
+    align-self: center;
+    margin-left: 10vw;
+}
+.lesson-big-button {
+
+}
+
+/* .description-image {
+    transform: scale(2);
+} */
