@@ -80,37 +80,40 @@ export default function SignUpForm(props){
             <form autoComplete="off" onSubmit= {handleSubmit}>
                 <h1 className='signup-title'>Create account</h1>
                 <img src={require('../../images/parent.jpeg')}></img>
-                <h1 className='signup-title'>Parent</h1>
-                <div>
+                {/* <h1 className='signup-title'>Parent</h1> */}
+                <div className='input-container-signup'>
                     <input placeholder="Name" name="name" onChange={handleChange} />
                     <input placeholder="Email" name="email" onChange={handleChange} />
-                    <input placeholder="Password" name="password" onChange={handleChange} />
-                    <input placeholder="Confirm Password"name="confirm" onChange={handleChange} />
-                    <p>Password must:</p>
-                    <div className='pass-validation'>
-                        {passwordValidation.length ? 
-                        <img src={require('../../images/signup_validation_complete.png')}></img>
-                        : <img src={require('../../images/signup_validation_not_complete.png')}></img>
-                        }
-                        <p>Be at least 8 characters long</p>
-                    </div>
-                    <div className='pass-validation'>
-                        {passwordValidation.confirm ? 
-                        <img src={require('../../images/signup_validation_complete.png')}></img>
-                        : <img src={require('../../images/signup_validation_not_complete.png')}></img>
-                        }
-                    <p>Passwords should match</p>
-                    </div>
-                    <div className='pass-validation'>
-                        {passwordValidation.numSymbol ? 
-                        <img src={require('../../images/signup_validation_complete.png')}></img>
-                        : <img src={require('../../images/signup_validation_not_complete.png')}></img>
-                        }
-                        <p>Include at least one number or symbol</p>
+                    <input placeholder="Password" type="password" name="password" onChange={handleChange} />
+                    <input placeholder="Confirm Password" type="password" name="confirm" onChange={handleChange} />
+                    <p className='member'>Already a Member? &nbsp;<Link to="/login">Login here</Link></p>
+                    <br></br>
+                    <div className='signup-validation'>
+                        <p>Password must:</p>
+                        <div className='pass-validation'>
+                            {passwordValidation.length ? 
+                            <img src={require('../../images/signup_validation_complete.png')}></img>
+                            : <img src={require('../../images/signup_validation_not_complete.png')}></img>
+                            }
+                            <p>Be at least 8 characters long</p>
+                        </div>
+                        <div className='pass-validation'>
+                            {passwordValidation.confirm ? 
+                            <img src={require('../../images/signup_validation_complete.png')}></img>
+                            : <img src={require('../../images/signup_validation_not_complete.png')}></img>
+                            }
+                        <p>Passwords should match</p>
+                        </div>
+                        <div className='pass-validation'>
+                            {passwordValidation.numSymbol ? 
+                            <img src={require('../../images/signup_validation_complete.png')}></img>
+                            : <img src={require('../../images/signup_validation_not_complete.png')}></img>
+                            }
+                            <p>Include at least one number or symbol</p>
+                        </div>
                     </div>
                 </div>
                 <button className="signup-button" disabled={userData.signup} type="submit"> Continue </button>
-                <p>Already a Member? &nbsp;<Link to="/login">Login here</Link></p>
             </form>
         </div>
     )

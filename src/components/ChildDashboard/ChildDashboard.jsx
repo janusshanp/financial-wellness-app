@@ -15,8 +15,8 @@ export default function ChildDashboard(props){
 
     return(
         <div>
-            <ChildHeader/>
             <div className="child-dashboard">
+                <ChildHeader/>
                 <h1 className="dash-title">Hello ! {props.childUser.name}</h1>
                 <div className="piggy-container">
                     <img src={require('../../images/piggy_child_dashboard.png')}></img>
@@ -26,5 +26,5 @@ export default function ChildDashboard(props){
                 <ChildNav/>
             </div>
         </div>
-    )
+)
 }

@@ -1,20 +1,26 @@
-.child-header img {
+/* .child-header img {
     width: 100px;
     height: 100px;
     z-index: 5;
-}
+} */
 
 .child-header-avatar {
     position: absolute;
     left: 80px;
     top: 60px;
     border-radius: 100px;
+    width: 100px;
+    height: 100px;
+    z-index: 5;
 }
 
 .child-header-fire {
     position: absolute;
     right: 90px;
     top: 60px;
+    width: 100px;
+    height: 100px;
+    z-index: 5;
 }
 
 .child-header {
