@@ -16,10 +16,12 @@ async function updateChildBalance(req,res){
     console.log('req body',req.body)
     try{
         //might need to change id param
-        let childObject = await Child.findById(req.child._id)
-        console.log(childObject)
-        childObject.balance = req.body.balance
+        let childObject = await Child.findById(req.body.id)
+        console.log('childObject Before',childObject)
+        childObject.totalBalance = req.body.balance
         await childObject.save()
+        console.log('childObject After',childObject)
+
         res.status(200).json(childObject)
     }
     catch(err){

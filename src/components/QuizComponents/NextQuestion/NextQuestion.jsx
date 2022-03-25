@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import './NextQuestion.css'
 import {useNavigate, useLocation} from 'react-router-dom'
 
-function NextQuestion({questions, currentQuestion, setCurrentQuestion, options, setOptions, numberOfQuestions, checkOrNext, setCheckOrNext, nextOrContinue, setNextOrContinue,radioBtnValue, setRadioBtnValue, selectedRadioButtonEvent, setSelectedRadioButtonEvent, correctAnswerRef, explanationVisibility, setExplanationVisibility, setShowConfetti}) {
+function NextQuestion({questions, currentQuestion, setCurrentQuestion, options, setOptions, numberOfQuestions, checkOrNext, setCheckOrNext, nextOrContinue, setNextOrContinue,radioBtnValue, setRadioBtnValue, selectedRadioButtonEvent, setSelectedRadioButtonEvent, correctAnswerRef, explanationVisibility, setExplanationVisibility, setShowConfetti, childUser, setChildUser}) {
   const location = useLocation()
   // const [lessonData, setLessonData] = useState(location.state.lessonData)
   
@@ -12,6 +12,38 @@ function NextQuestion({questions, currentQuestion, setCurrentQuestion, options, 
   useEffect(()=>{
     console.log('questions NULLL', questions);
   },[currentQuestion,disabledState]);
+
+  async function updateBalance(newBalance,childId){
+    let jwt = localStorage.getItem('token')
+    try{
+      //indent this
+      let fetchResponse= await fetch('/api/users/child/updateBalance',{
+          method: "POST",
+          headers: {
+              'Authorization': 'Bearer ' + jwt,
+              "Content-Type": "application/json"
+          },
+          body: JSON.stringify({
+
+              balance: newBalance,
+              id:childId
+          })
+      })
+      if  (fetchResponse.ok){
+        let newUser = await fetchResponse.json()
+        console.log(newUser)
+        setChildUser(newUser)
+            
+       }else{
+           console.log('error')
+       }
+    }
+    catch(err){
+      console.log('update Balance Error', err)
+    }  
+}
+
+
 
   //next question button functionality
  function next(){
@@ -23,8 +55,9 @@ function NextQuestion({questions, currentQuestion, setCurrentQuestion, options, 
    selectedRadioButtonEvent.parentElement.style.opacity="1";
    correctAnswerRef.current.style.border="";
    if (nextOrContinue ==="Continue"){
-     //MVP ADD TO BALANCE
-     //MVP Complete Topic boolean
+     //ICEBOX Complete Topic boolean
+     updateBalance(childUser.totalBalance + 3, childUser._id);
+    //  console.log(childUser.totalBalance)
     navigate(`/results/one`)
    }
 
