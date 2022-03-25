@@ -91,7 +91,6 @@ export default function ChildSignUp(props){
                 />
                 <img src={require('../../images/piggy_bank_questions.png')}></img>
                 <button onClick={stepOneClick} className="signup-button">Continue</button>
-                {topics.map((t) => t.name)}
             </div>
             :
             false
