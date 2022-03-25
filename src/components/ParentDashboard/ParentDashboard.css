@@ -13,12 +13,12 @@
     margin: 55px;
 }
 
-.parent-header img{
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    left: 80px;
-    top: 40px;
+.parent-img{
+    /* position: absolute; */
+    width: 28vmin;
+    height: 28vmin;
+    left: 50%;
+    margin-top: 10vh;
     border: 10px solid #2B3856;
     box-sizing: border-box;
     border-radius: 100px;
@@ -32,6 +32,10 @@
     text-align: center;
     margin: 20px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .child-box p {
