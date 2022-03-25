@@ -1,14 +1,18 @@
 .login-page {
     text-align: center;
     margin: 20px;
-    margin-top: 80px;
+    margin-top: 10vh;
 }
 
 .login-page p {
-    font-size: 34px;
+    font-size: 60px;
     line-height: 46px;
+    margin-bottom:10vh;
+    margin-top: 20vh;
 }
-
+.login-page .signup-here{
+    font-size: 34px;
+}
 .login-page input {
     width: 487px;
     height: 72px;

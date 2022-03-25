@@ -57,7 +57,7 @@ export default function Login(props) {
                 />
                 <br></br>
                 <button className="signup-button"type='submit'>Submit</button>
-                <p>Not a Member? &nbsp;<Link to="/signup">Signup here</Link></p>
+                <p className="signup-here">Not a Member? &nbsp;<Link to="/signup">Signup here</Link></p>
             </form>
         </div>
     )
