@@ -2,6 +2,7 @@ import "./LessonStart.css";
 import { useState } from "react";
 import {useNavigate, useLocation} from 'react-router-dom'
 import ChildNav from '../ChildNav/ChildNav'
+import ChildHeader from "../ChildHeader/ChildHeader";
 
 
 export default function LessonStart(props) {
@@ -12,6 +13,7 @@ export default function LessonStart(props) {
 
     return (
     <div>
+        <ChildHeader/>
         <div className="lesson-start">
             <h1>{lessonData.title}</h1>
             <img src={require('../../images/' + lessonData.imgUrl )}></img>

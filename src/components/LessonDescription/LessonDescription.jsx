@@ -2,6 +2,7 @@ import './LessonDescription.css'
 import { useState } from "react";
 import {useNavigate, useLocation} from 'react-router-dom'
 import ChildNav from '../ChildNav/ChildNav'
+import ChildHeader from '../ChildHeader/ChildHeader';
 
 
 export default function LessonDescription(props) {
@@ -12,6 +13,7 @@ export default function LessonDescription(props) {
 
     return (
     <div>
+        <ChildHeader/>
         <div className='lesson-description'>
             <h1>{lessonData.title}</h1>
             <img src={require('../../images/' + lessonData.imgUrl )}></img>

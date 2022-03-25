@@ -2,6 +2,7 @@ import "./LessonStory.css";
 import { useState } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import ChildNav from "../ChildNav/ChildNav";
+import ChildHeader from "../ChildHeader/ChildHeader";
 
 export default function LessonStory(props) {
   const location = useLocation();
@@ -11,7 +12,8 @@ export default function LessonStory(props) {
 
   return (
     <div className="story-page">
-        <h1>{lessonData.storyTitle}</h1>
+      <ChildHeader/>
+      <h1>{lessonData.storyTitle}</h1>
       <div className="lesson-story">
         
         <img src={require("../../images/ant.png")} />

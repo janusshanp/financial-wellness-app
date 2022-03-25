@@ -1,0 +1,21 @@
+.child-header img {
+    width: 100px;
+    height: 100px;
+}
+
+.child-header-avatar {
+    position: absolute;
+    left: 80px;
+    top: 60px;
+    border-radius: 100px;
+}
+
+.child-header-fire {
+    position: absolute;
+    left: 692px;
+    top: 60px;
+}
+
+.child-header {
+    margin-bottom: 170px;;
+}

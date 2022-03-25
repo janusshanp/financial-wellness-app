@@ -4,12 +4,13 @@
     color: white;
     
 }
-h1 {
+.topic-page h1 {
     text-align: center;
     font-style: normal;
     font-weight: 700;
     font-size: 50px;
     line-height: 68px;
+    width: 559px;
 }
 
 .TopicList {
@@ -22,5 +23,6 @@ h1 {
 .topic-page {
     display: flex;
     flex-direction: column;
-
+    text-align: center;
+    align-items: center;
 }

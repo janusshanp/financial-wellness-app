@@ -2,6 +2,7 @@ import "./TopicList.css";
 import { useEffect, useState } from "react";
 import TopicSelector from "../TopicSelector/TopicSelector";
 import ChildNav from "../ChildNav/ChildNav"
+import ChildHeader from "../ChildHeader/ChildHeader";
 
 function TopicList() {
   const [topics, setTopics] = useState(false)
@@ -18,6 +19,7 @@ function TopicList() {
 
   return (
     <div className="topic-page">
+      <ChildHeader/>
       <h1>What do you want to learn today?</h1>
       {/* <img src={require('../../images/' + topics[1].imgUrl)}></img> */}
         {topics ?
