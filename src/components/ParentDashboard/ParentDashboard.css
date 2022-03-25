@@ -9,8 +9,9 @@
 }
 
 .parent-header p {
-    font-size: 34px;
-    margin: 55px;
+    font-size: 60px;
+    font-weight: 800;
+    margin-bottom: 5vh;
 }
 .child-box > *{
     background:transparent;
@@ -21,16 +22,16 @@
     width: 28vmin;
     height: 28vmin;
     left: 50%;
-    margin-top: 10vh;
+    margin-top: 5vh;
     border: 10px solid #2B3856;
     box-sizing: border-box;
     border-radius: 100px;
 }
 
 .child-box {
-    width: 674px;
+    width: 574px;
     height: 304px;
-    background: #FFFFFF;
+    background: white;
     border-radius: 20px;
     text-align: center;
     margin: 20px;
@@ -42,7 +43,7 @@
 }
 
 .child-box p {
-    background-color: white;
+    background-color: transparent ;
     color: #2B3856;
-    font-size: 34px;
+    font-size: 45px;
 }

@@ -37,9 +37,8 @@ export default function ParentDashboard(props){
                     onClick={openNav}
                     src={require('../../images/parent.jpeg')}>
                 </img>
-                <p>Dashboard</p>           
+                <p>Hello, {props.user.name}!</p>           
             </div>
-            <h1>Hello {props.user.name}!</h1>
             {props.user.children.length ?
 
             props.user.children.map(child => 
