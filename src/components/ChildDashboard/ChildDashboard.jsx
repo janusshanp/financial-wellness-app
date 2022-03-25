@@ -14,16 +14,12 @@ export default function ChildDashboard(props){
     
 
     return(
-        <div>
+        <div className="child-dashboard">
             <ChildHeader/>
-            <div className="child-dashboard">
-                <h1 className="dash-title">Hello! {props.childUser.name}</h1>
-                <div className="piggy-container">
-                    <img src={require('../../images/piggy_child_dashboard.png')}></img>
-                    <p>Balance: ${props.childUser.totalBalance}</p>
-                </div>
-                <button onClick={()=> navigate("/child/lesson")}className="dash-button">I want to collect coins!</button>
-                <ChildNav/>
+            <h1 className="dash-title">Hello, {props.childUser.name}!</h1>
+            <div className="piggy-container">
+                <img src={require('../../images/piggy_child_dashboard.png')}></img>
+                <p>Balance: ${props.childUser.totalBalance}</p>
             </div>
         </div>
     )

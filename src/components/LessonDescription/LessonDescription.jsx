@@ -15,15 +15,20 @@ export default function LessonDescription(props) {
     <div>
         <ChildHeader/>
         <div className='lesson-description'>
+            <div>
             <h1>{lessonData.title}</h1>
-            <img src={require('../../images/' + lessonData.imgUrl )}></img>
-            <p>{lessonData.description}</p>
+            <img src={require('../../images/' + lessonData.imgUrl )} className="description-image"></img>
+            </div>
+            <div className='description-wrapper'>
+            <p id="description-text">{lessonData.description}</p>
             <button 
                 onClick={()=> navigate(`/lesson/${lessonData._id}/story`,{state: {lessonData}})}
                 className="lesson-big-button"
             >Let's go!</button> 
-            <ChildNav/>
+            </div>
+            
         </div>
+        <ChildNav/>
     </div>
     
     )
