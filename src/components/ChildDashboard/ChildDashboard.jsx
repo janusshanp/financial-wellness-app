@@ -14,7 +14,7 @@ export default function ChildDashboard(props){
 
     return(
         <div className="child-dashboard">
-            <h1 className="dash-title">Hello! {props.childUser.name}</h1>
+            <h1 className="dash-title">Hello, {props.childUser.name}!</h1>
             <div className="piggy-container">
                 <img src={require('../../images/piggy_child_dashboard.png')}></img>
                 <p>Balance: ${props.childUser.totalBalance}</p>
