@@ -21,27 +21,100 @@ PiggyPay was created by six students: Janusshan Paramasivam (Dev), Ryan Joseph(D
 ### Screenshots:
 
 
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/HomePage.png" />
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Child_Dashboard.png" />
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Child_Switch_Account.png" />
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Lesson_Intro.png" />
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Lesson_Page.png" />
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Login_Page.png" />
+<img  
+    alt="la"
+    width="50"
+    height="50" 
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/HomePage.png" 
+/>
+<img  
+    alt="la"
+    width="50"
+    height="50"  
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Child_Dashboard.png" 
+/>
+<img  
+    alt="la"
+    width="50"
+    height="50" 
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Child_Switch_Account.png" 
+/>
+<img  
+    alt="la"
+    width="50"
+    height="50"  
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Lesson_Intro.png"
+/>
+<img  
+    alt="la"
+    width="50"
+    height="50" 
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Lesson_Page.png" 
+/>
+<img  
+    alt="la"
+    width="50"
+    height="50" 
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Login_Page.png" 
+/>
 
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Parent_Dashboard.png" />
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_1.png" />
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_Done.png" />
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_Intro.png" />
+<img  
+    alt="la"
+    width="50"
+    height="50" 
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Parent_Dashboard.png" 
+/>
+<img  
+    alt="la"
+    width="50"
+    height="50" 
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_1.png" 
+/>
+<img  
+    alt="la"
+    width="50"
+    height="50" 
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_Done.png" 
+/>
+<img  
+    alt="la"
+    width="50"
+    height="50" 
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_Intro.png" 
+/>
 
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_Wrong.png" />
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_Intro.png" />
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Signup_Page.png" />
+<img  
+    alt="la"
+    width="50"
+    height="50" 
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_Wrong.png" 
+/>
+<img  
+    alt="la"
+    width="50"
+    height="50" 
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_Intro.png" 
+/>
+<img  
+    alt="la"
+    width="50"
+    height="50" 
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Signup_Page.png" 
+/>
 
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Story_Page.png" />
-<img  alt="la" src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Switch_Account.png" />
-                    
-
-                    
+<img  
+    alt="la"
+    width="50"
+    height="50" 
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Story_Page.png" 
+/>
+<img  
+    alt="la"
+    width="50"
+    height="50" 
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Switch_Account.png" 
+/>
+                                       
 <br />
 
 ---
