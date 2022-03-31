@@ -22,7 +22,7 @@ PiggyPay was created by six students: Janusshan Paramasivam (Dev), Ryan Joseph(D
 
 <img  
     alt="la"
-    width="100"
+    width="175"
     height="300"  
     src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Login_Page.png" 
 />
