@@ -20,99 +20,97 @@ PiggyPay was created by six students: Janusshan Paramasivam (Dev), Ryan Joseph(D
 
 ### Screenshots:
 
-
 <img  
     alt="la"
-    width="50"
-    height="50" 
+    width="100"
+    height="300"  
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Login_Page.png" 
+/>
+<img  
+    alt="la"
+    width="100"
+    height="300"  
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Signup_Page.png" 
+/>
+<img  
+    alt="la"
+    width="100"
+    height="300" 
     src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/HomePage.png" 
 />
 <img  
     alt="la"
-    width="50"
-    height="50"  
-    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Child_Dashboard.png" 
-/>
-<img  
-    alt="la"
-    width="50"
-    height="50" 
-    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Child_Switch_Account.png" 
-/>
-<img  
-    alt="la"
-    width="50"
-    height="50"  
-    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Lesson_Intro.png"
-/>
-<img  
-    alt="la"
-    width="50"
-    height="50" 
-    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Lesson_Page.png" 
-/>
-<img  
-    alt="la"
-    width="50"
-    height="50" 
-    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Login_Page.png" 
-/>
-
-<img  
-    alt="la"
-    width="50"
-    height="50" 
+    width="100"
+    height="300"  
     src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Parent_Dashboard.png" 
 />
 <img  
     alt="la"
-    width="50"
-    height="50" 
+    width="100"
+    height="300"  
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Switch_Account.png" 
+/>
+
+<img  
+    alt="la"
+    width="100"
+    height="300"   
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Child_Dashboard.png" 
+/>
+<img  
+    alt="la"
+    width="100"
+    height="300"  
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Child_Switch_Account.png" 
+/>
+<img  
+    alt="la"
+    width="100"
+    height="300" 
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Lesson_Page.png" 
+/>
+<img  
+    alt="la"
+    width="100"
+    height="300"   
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Lesson_Intro.png"
+/>
+
+<img  
+    alt="la"
+    width="100"
+    height="300"  
     src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_1.png" 
 />
 <img  
     alt="la"
-    width="50"
-    height="50" 
-    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_Done.png" 
-/>
-<img  
-    alt="la"
-    width="50"
-    height="50" 
+    width="100"
+    height="300"  
     src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_Intro.png" 
 />
-
 <img  
     alt="la"
-    width="50"
-    height="50" 
+    width="100"
+    height="300"  
     src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_Wrong.png" 
 />
 <img  
     alt="la"
-    width="50"
-    height="50" 
+    width="100"
+    height="300"  
     src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_Intro.png" 
 />
 <img  
     alt="la"
-    width="50"
-    height="50" 
-    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Signup_Page.png" 
-/>
-
-<img  
-    alt="la"
-    width="50"
-    height="50" 
+    width="100"
+    height="300" 
     src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Story_Page.png" 
 />
 <img  
     alt="la"
-    width="50"
-    height="50" 
-    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Switch_Account.png" 
+    width="100"
+    height="300"  
+    src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Quiz_Page_Done.png" 
 />
                                        
 <br />
@@ -121,14 +119,11 @@ PiggyPay was created by six students: Janusshan Paramasivam (Dev), Ryan Joseph(D
 
 ### Usage:
 
-1. Everyone can come and use our app without having to sign up for an account. However, in order to use all the features, we recommend user to log in or sign up.
-2. On the home page, we can see all the projects from users.
-3. We can filter and sort the projects by their tools, languages, and author name, ect.
-4. We can view, like, save, and comment on a specific project.
-5. We can also view other users' page as well to see if they have more cool projects to showcase.
-6. If we want to contact other users, we can send a direct message to them in realtime.
-6. We can go to the upload page and create a project easily as we have instructions for each input field.
-7. Finally, we can go to our profile page to see our profile info, edit our background image, view projects that we created, view projects that we liked or saved.
+1. In order to use all the features, we recommend user to log in or sign up.
+2. On the parent page you can switch to a child account where 
+3. From the child dashboard page you can access different topics
+4. After clicking a topic you can go through the story and quiz to earn coins 
+5. Once a quiz is completed you can earn coins depending on the number of questions you get correct. 
 
 <br />
 
