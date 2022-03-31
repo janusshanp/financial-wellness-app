@@ -50,7 +50,6 @@ PiggyPay was created by six students: Janusshan Paramasivam (Dev), Ryan Joseph(D
     height="300"  
     src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Switch_Account.png" 
 />
-
 <img  
     alt="la"
     width="200"
@@ -75,7 +74,6 @@ PiggyPay was created by six students: Janusshan Paramasivam (Dev), Ryan Joseph(D
     height="300"    
     src="https://github.com/janusshanp/financial-wellness-app/blob/main/src/images/readme/Lesson_Intro.png"
 />
-
 <img  
     alt="la"
     width="200"
